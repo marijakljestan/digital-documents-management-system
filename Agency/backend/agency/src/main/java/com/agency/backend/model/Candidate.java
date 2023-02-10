@@ -27,7 +27,7 @@ public class Candidate extends BaseEntity{
     @Column(unique = true, nullable = false)
     private String phoneNumber;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
 

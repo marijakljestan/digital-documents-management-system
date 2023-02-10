@@ -7,6 +7,7 @@ import com.agency.backend.model.Candidate;
 import com.agency.backend.repository.AddressRepository;
 import com.agency.backend.repository.CandidateRepository;
 import com.agency.backend.service.interfaces.CandidateService;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -26,16 +27,12 @@ public class CandidateServiceImpl implements CandidateService {
         LOGGER_INFO.info("CANDIDATE SERVICE: register - start.");
 
         Address address = modelMapper.map(candidateDto.getAddress(), Address.class);
-        addressRepository.save(address);
         Candidate candidate = modelMapper.map(candidateDto, Candidate.class);
         candidate.setAddress(address);
         LOGGER_INFO.info("CANDIDATE SERVICE: register - saving candidate...");
         try {
             candidate = candidateRepository.save(candidate);
-        }catch(RuntimeException e){
-            addressRepository.delete(address);
-            throw new CandidateAlreadyRegisteredException();
-        }
+        }catch(RuntimeException e) { throw new CandidateAlreadyRegisteredException(); }
 
         return candidate.getId();
     }
