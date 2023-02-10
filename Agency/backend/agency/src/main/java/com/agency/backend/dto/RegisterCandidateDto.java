@@ -15,7 +15,7 @@ public class RegisterCandidateDto {
     private String email;
     private String password;
     private String phoneNumber;
-    private Address address;
+    private AddressDto address;
     private File cv;
     private File coverLetter;
 }

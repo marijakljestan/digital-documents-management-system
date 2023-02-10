@@ -5,8 +5,8 @@ import { RegisterCandidateService } from '../../service/RegisterCandidateService
 
 function RegistrationPage() {
 
-    const [address, setAddress] = useState({streetName: "", streetNumber: "", city: "", country: ""});
-    const [candidate, setCandidate] = useState({firstName: "", lastName: "", email : "", password: "", degree: "", address: {}, cv: null, coverLetter: null});
+    const [address, setAddress] = useState({streetName: '', streetNumber: '', city: '', country: ''});
+    const [candidate, setCandidate] = useState({firstName: '', lastName: '', email : '', password: '', degree: '', address: {}, phoneNumber: '', cv: null, coverLetter: null});
 
     function handleChange(e) {
         const targetId = e.target.id;
@@ -42,7 +42,7 @@ function RegistrationPage() {
         else if(targetId === 'phone') {
             setCandidate(previousState => ({
                 ...previousState,
-                phone: targetValue
+                phoneNumber: targetValue
             }));
         }
 
@@ -118,6 +118,7 @@ function RegistrationPage() {
     }
 
     function handleSubmit() {
+        console.log(candidate);
         RegisterCandidateService.registerCandidate(candidate);
     }
     
@@ -128,11 +129,11 @@ function RegistrationPage() {
             </div>
             <div className={classes.form_wrapper}>
                 <div className={classes.left_side}>
-                    <input className={classes.form_input} required type='text'     id='fistName' placeholder='First name*'       onChange={handleChange}/><br/>
+                    <input className={classes.form_input} required type='text'     id='firstName' placeholder='First name*'      onChange={handleChange}/><br/>
                     <input className={classes.form_input} required type='text'     id='lastName' placeholder='Last name*'        onChange={handleChange}/><br/>
                     <input className={classes.form_input} required type='email'    id='email'    placeholder='Email*'            onChange={handleChange}/><br/>
                     <input className={classes.form_input} required type='password' id='password' placeholder='Password*'         onChange={handleChange}/><br/>       
-                    <input className={classes.form_input} required type='password' id='degree'   placeholder='Education degree*' onChange={handleChange}/><br/>   
+                    <input className={classes.form_input} required type='text'     id='degree'   placeholder='Education degree*' onChange={handleChange}/><br/>   
                     <div className={classes.upload_files}>
                         <p> CV: </p>
                         <input required type='file' id='cv' className={classes.file_upload} onChange={handleChange}/>
@@ -149,8 +150,8 @@ function RegistrationPage() {
                     <input className={classes.form_input} required type='text'  id='city'         placeholder='City*'          onChange={handleChange}/><br/>
                     <input className={classes.form_input} required type='text'  id='country'      placeholder='Country*'       onChange={handleChange}/><br/>
                     <div className={classes.btn_div}>
-                        <button className={classes.cancel_button} onChange={handleCancel}> Cancel</button>
-                        <button className={classes.save_button}   onChange={handleSubmit}> Confirm</button> 
+                        <button className={classes.cancel_button} onClick={handleCancel}> Cancel</button>
+                        <button className={classes.save_button}   onClick={handleSubmit}> Confirm</button> 
                     </div>
                 </div>
             </div>

@@ -24,16 +24,16 @@ public class Candidate extends BaseEntity{
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column(unique = true, nullable = false)
     private String phoneNumber;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private File cv;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private File coverLetter;
 }
