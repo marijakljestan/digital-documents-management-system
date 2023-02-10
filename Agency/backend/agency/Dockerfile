@@ -9,6 +9,7 @@ COPY --from=agencyBackendBuild /root/src/backend/target/agency-exe.jar ./
 VOLUME ./logs
 VOLUME ./cv
 VOLUME ./coverLetters
+VOLUME ./docs
 COPY --from=agencyBackendBuild /root/src/backend/logs ./logs
 EXPOSE 8080
 CMD java -jar agency-exe.jar

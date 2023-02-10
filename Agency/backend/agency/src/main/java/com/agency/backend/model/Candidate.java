@@ -24,6 +24,9 @@ public class Candidate extends BaseEntity{
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
+    private String degree;
+
     @Column(unique = true, nullable = false)
     private String phoneNumber;
 
@@ -32,8 +35,8 @@ public class Candidate extends BaseEntity{
     private Address address;
 
     @Column(nullable = true)
-    private File cv;
+    private String cv;
 
     @Column(nullable = true)
-    private File coverLetter;
+    private String coverLetter;
 }
