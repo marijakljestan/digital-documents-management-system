@@ -1,0 +1,114 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0)  50%, rgb(159, 180, 184)), 
+                linear-gradient(to right, rgba(255, 255, 255, 0) 30%, rgb(159, 180, 184)),
+                url('../../images/agency-2.jpg') center/cover;
+}
+
+.title_wrapper{
+    display: flex;
+    flex-direction: row;
+    margin: 2% 14%;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.vl{
+    border-left: 6px solid #f3ce13;
+    height: 40px;
+}
+
+h1{
+    color: white;
+    margin-left: 10px;
+}
+
+.form_wrapper{
+    margin: 2% 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left_side{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5%;
+}
+
+.right_side{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 2%;
+}
+
+.form_input{
+    width: 75%;
+    height: 40px;
+    border-width: 1px;
+    border-radius: 10px;
+    text-indent: 10px;
+}
+
+h6, p{
+    color: white;
+}
+
+hr{
+    width: 75%;
+    margin-right: 25%;
+    color: white;
+}
+
+.upload_files{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.file_upload{
+    margin-right: 5%;  
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.btn_div{
+    display: flex;
+    justify-content: center;
+    margin-right: 25%;
+    margin-top: 3rem;
+}
+
+.cancel_button {
+    background-color: white;
+    border-color: rgb(218, 214, 214);
+    color: #2c3e50;
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    margin-right: 2rem;
+}
+
+.cancel_button:hover{
+    cursor: pointer;
+    background-color: rgb(196, 202, 208);
+}
+
+.save_button {
+    background-color: rgb(52, 82, 127);
+    color: white;
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    margin-left: 10px;
+}
+
+.save_button:hover,
+.save_button:active {
+    background-color: rgb(104, 126, 160);
+    cursor: pointer;
+}
