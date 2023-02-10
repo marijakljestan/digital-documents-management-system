@@ -1,0 +1,40 @@
+version: "3.8"
+services:
+  #agency_service:
+  #  build:
+  #    context: ./
+  #    dockerfile: Dockerfile
+  #    target: ${TARGET:-agencyBackendRuntime}
+  #  container_name: agency_service
+  #  restart: on-failure
+  #  ports:
+  #    - ${AGENCY_SERVICE_PORT}:8080
+  #  environment:
+  #    AGENCY_SERVICE_PORT: ${AGENCY_SERVICE_PORT}
+  #    AGENCY_DB_URL: ${AGENCY_DB_URL}
+  #    AGENCY_DB_USER: ${AGENCY_DB_USER}
+  #    AGENCY_DB_PASSWORD: ${AGENCY_DB_PASSWORD}
+  #  depends_on:
+  #    - agency_db
+
+  agency_db:
+    image: postgres:14.1
+    container_name: agency_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${AGENCY_DB_USER}
+      POSTGRES_PASSWORD: ${AGENCY_DB_PASSWORD}
+      POSTGRES_DB: ${AGENCY_DB_NAME}
+      POSTGRES_HOST: ${AGENCY_DB_HOST}
+    ports:
+      - 5432:5432  
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PG_ADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PG_ADMIN_PASSWORD}
+    ports:
+      - "5050:80"
+    restart: unless-stopped
