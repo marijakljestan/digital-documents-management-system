@@ -14,6 +14,13 @@ services:
       AGENCY_DB_URL: ${AGENCY_DB_URL}
       AGENCY_DB_USER: ${AGENCY_DB_USER}
       AGENCY_DB_PASSWORD: ${AGENCY_DB_PASSWORD}
+    volumes:
+      - type: bind
+        source: ./logs
+        target: /app/logs      
+      - type: bind
+        source: ./docs
+        target: /app/docs    
     depends_on:
       - agency_db
 

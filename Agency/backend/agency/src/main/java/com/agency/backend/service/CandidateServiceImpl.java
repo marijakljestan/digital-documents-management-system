@@ -12,8 +12,12 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.print.DocFlavor;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import static com.agency.backend.AgencyApplication.LOGGER_INFO;
 
@@ -44,16 +48,20 @@ public class CandidateServiceImpl implements CandidateService {
     }
 
     private String storeCandidateCV(RegisterCandidateDto candidateDto) {
-        String basePath = new File("./cv/").getAbsolutePath();
-        File fileName = new File (basePath, candidateDto.getId());
-        Path cvPath = fileStorageService.store(candidateDto.getCv(), fileName.getName());
-        return cvPath.toString();
+        String fileName = new StringBuilder(candidateDto.getId()).append("_")
+                                .append(candidateDto.getFirstName()).append("_").append(candidateDto.getLastName())
+                                .append("_cv").append(".pdf").toString();
+        String directoryPath = "cv/" + fileName;
+        fileStorageService.store(candidateDto.getCv(), directoryPath);
+        return directoryPath;
     }
 
     private String storeCandidateCoverLetter(RegisterCandidateDto candidateDto) {
-        String basePath = new File("./coverLetters/").getAbsolutePath();
-        File fileName = new File (basePath, candidateDto.getId());
-        Path cvPath = fileStorageService.store(candidateDto.getCv(), fileName.getName());
-        return cvPath.toString();
+        String fileName = new StringBuilder(candidateDto.getId()).append("_")
+                                    .append(candidateDto.getFirstName()).append("_").append(candidateDto.getLastName())
+                                    .append("_cover_letter").append(".pdf").toString();
+        String directoryPath = "coverLetters/" + fileName;
+        fileStorageService.store(candidateDto.getCoverLetter(), directoryPath);
+        return directoryPath;
     }
 }

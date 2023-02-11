@@ -8,6 +8,8 @@ import org.springframework.core.io.UrlResource;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -23,28 +25,18 @@ import static com.agency.backend.AgencyApplication.LOGGER_INFO;
 @AllArgsConstructor
 public class FileSystemStorageService implements StorageService {
 
-    private final StorageProperties properties;
-
-    private final String ROOT_LOCATION = "docs";
+    private final String ROOT_LOCATION = "docs/";
     private final Path rootLocation = Paths.get(ROOT_LOCATION);
 
     @Override
-    public Path store(MultipartFile file, String fileName) {
+    public void store(MultipartFile file, String path) {
         try {
             if (file.isEmpty())
                 throw new StorageException("Failed to store empty file.");
 
-            Path destinationFile = this.rootLocation.resolve(
-                            Paths.get(fileName)
-                                 .normalize().toAbsolutePath());
-            LOGGER_INFO.info("FILE SYSTEM STORAGE - file path ", destinationFile);
-            //if (!destinationFile.getParent().equals(this.rootLocation.toAbsolutePath()))
-             //   throw new StorageException("Cannot store file outside current directory.");
-
-            try (InputStream inputStream = file.getInputStream()) {
-                Files.copy(inputStream, destinationFile, StandardCopyOption.REPLACE_EXISTING);
-                return load(file.getOriginalFilename());
-            }
+            byte[] bytes = file.getBytes();
+            String rootPath = ROOT_LOCATION + path;
+            Files.write(Paths.get(rootPath), bytes);
         }
         catch (IOException e) { throw new StorageException("Failed to store file.", e); }
     }
@@ -52,7 +44,7 @@ public class FileSystemStorageService implements StorageService {
     @Override
     public Stream<Path> loadAll() {
         try {
-            return Files.walk(this.rootLocation, 1)
+            return Files.walk(this.rootLocation, 2)
                     .filter(path -> !path.equals(this.rootLocation))
                     .map(this.rootLocation::relativize);
         }

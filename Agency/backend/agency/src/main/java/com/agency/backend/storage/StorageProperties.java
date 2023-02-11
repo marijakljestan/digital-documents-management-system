@@ -11,6 +11,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class StorageProperties {
 
     private String cvLocation = "cv";
-    private String coverLettersLocation = "cover-letter";
+    private String coverLettersLocation = "coverLetters";
     private String rootLocation = "docs";
 }
