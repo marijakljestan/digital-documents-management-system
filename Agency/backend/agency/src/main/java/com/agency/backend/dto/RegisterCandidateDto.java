@@ -1,8 +1,7 @@
 package com.agency.backend.dto;
 
-import com.agency.backend.model.Address;
 import lombok.*;
-import java.io.File;
+import org.springframework.web.multipart.MultipartFile;
 
 @Data
 @NoArgsConstructor
@@ -10,12 +9,17 @@ import java.io.File;
 @Builder
 public class RegisterCandidateDto {
 
+    private String id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
+    private String degree;
     private String phoneNumber;
-    private AddressDto address;
-    private File cv;
-    private File coverLetter;
+    private String streetName;
+    private String streetNumber;
+    private String city;
+    private String country;
+    private MultipartFile cv;
+    private MultipartFile coverLetter;
 }

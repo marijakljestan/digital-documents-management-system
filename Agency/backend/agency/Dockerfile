@@ -3,12 +3,10 @@ WORKDIR /root/src/backend
 COPY . .
 RUN mvn package  -DskipTests
 
-FROM openjdk:19 AS agencyBackendRuntime
+FROM openjdk:17 AS agencyBackendRuntime
 WORKDIR /app
 COPY --from=agencyBackendBuild /root/src/backend/target/agency-exe.jar ./
 VOLUME ./logs
-VOLUME ./cv
-VOLUME ./coverLetters
-COPY --from=agencyBackendBuild /root/src/backend/logs ./logs
+VOLUME ./docs
 EXPOSE 8080
 CMD java -jar agency-exe.jar

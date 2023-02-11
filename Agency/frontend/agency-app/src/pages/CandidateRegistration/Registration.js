@@ -117,9 +117,35 @@ function RegistrationPage() {
 
     }
 
-    function handleSubmit() {
+    function handleSubmit(event) {
         console.log(candidate);
-        RegisterCandidateService.registerCandidate(candidate);
+
+        event.preventDefault();
+        const formData = new FormData();
+  
+        // Add form inputs to FormData
+        formData.append("firstName",    event.target.firstName.value);
+        formData.append("lastName",     event.target.lastName.value);
+        formData.append("email",        event.target.email.value);
+        formData.append("password",     event.target.password.value);
+        formData.append("degree",       event.target.degree.value);
+        formData.append("phoneNumber",  event.target.phone.value);
+        formData.append("streetName",   event.target.streetName.value);
+        formData.append("streetNumber", event.target.streetNumber.value);
+        formData.append("city",         event.target.city.value);
+        formData.append("country",      event.target.country.value);
+        
+        // Add file input to FormData
+        formData.append("cv",          event.target.cv.files[0]);
+        formData.append("coverLetter", event.target.coverLetter.files[0]);
+
+        try {
+            RegisterCandidateService.registerCandidate(formData);
+          } catch (error) {
+            console.error(error);
+          }
+
+        //RegisterCandidateService.registerCandidate(candidate);
     }
     
     return(
@@ -127,7 +153,7 @@ function RegistrationPage() {
             <div className={classes.title_wrapper}>
                 <h1 className={classes.title}> Register here</h1>
             </div>
-            <div className={classes.form_wrapper}>
+            <form onSubmit={(e) => handleSubmit(e)} encType="multipart/form-data" className={classes.form_wrapper}>
                 <div className={classes.left_side}>
                     <input className={classes.form_input} required type='text'     id='firstName' placeholder='First name*'      onChange={handleChange}/><br/>
                     <input className={classes.form_input} required type='text'     id='lastName' placeholder='Last name*'        onChange={handleChange}/><br/>
@@ -151,10 +177,10 @@ function RegistrationPage() {
                     <input className={classes.form_input} required type='text'  id='country'      placeholder='Country*'       onChange={handleChange}/><br/>
                     <div className={classes.btn_div}>
                         <button className={classes.cancel_button} onClick={handleCancel}> Cancel</button>
-                        <button className={classes.save_button}   onClick={handleSubmit}> Confirm</button> 
+                        <button className={classes.save_button}   type="submit"> Confirm</button> 
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     );
 
