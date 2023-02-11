@@ -32,9 +32,7 @@ services:
       POSTGRES_USER: ${AGENCY_DB_USER}
       POSTGRES_PASSWORD: ${AGENCY_DB_PASSWORD}
       POSTGRES_DB: ${AGENCY_DB_NAME}
-      POSTGRES_HOST: ${AGENCY_DB_HOST}
-    ports:
-      - 5432:5432  
+      POSTGRES_HOST: ${AGENCY_DB_HOST} 
 
   pgadmin:
     container_name: pgadmin

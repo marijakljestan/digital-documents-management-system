@@ -48,9 +48,13 @@ h1{
 .form_input{
     width: 75%;
     height: 40px;
-    border-width: 1px;
+    border-width: 0px;
     border-radius: 10px;
     text-indent: 10px;
+}
+
+.form_input:focus {
+    outline: none;
 }
 
 h6, p{
