@@ -1,6 +1,18 @@
 .pageWrapper {
     display: flex;
     flex-direction: row;
+    
+}
+
+.searchResults{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: rgb(241, 249, 255);
 }
 
 .right {
