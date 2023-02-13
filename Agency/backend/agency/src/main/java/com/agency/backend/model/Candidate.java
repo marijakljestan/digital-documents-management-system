@@ -1,15 +1,15 @@
 package com.agency.backend.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
-import java.io.File;
 
-@Entity
-@Table
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
+@Table
 public class Candidate extends BaseEntity{
 
     @Column(nullable = false)

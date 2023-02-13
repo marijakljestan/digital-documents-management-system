@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 
 @AllArgsConstructor
-public class CandidateDataMapper {
+public class CandidateEntityMapper {
 
     private final ModelMapper modelMapper;
 

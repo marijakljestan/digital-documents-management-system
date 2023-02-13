@@ -1,9 +1,11 @@
 package com.agency.backend.model;
 
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
