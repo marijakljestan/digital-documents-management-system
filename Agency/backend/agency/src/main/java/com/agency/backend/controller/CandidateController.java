@@ -1,6 +1,7 @@
 package com.agency.backend.controller;
 
 import com.agency.backend.dto.RegisterCandidateDto;
+import com.agency.backend.service.interfaces.CandidateIndexingService;
 import com.agency.backend.service.interfaces.CandidateService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,6 +24,8 @@ import static com.agency.backend.AgencyApplication.LOGGER_INFO;
 public class CandidateController {
 
     private final CandidateService candidateService;
+    private final CandidateIndexingService candidateIndexingService;
+
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestParam("cv") MultipartFile cv,

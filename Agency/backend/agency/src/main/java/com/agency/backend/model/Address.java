@@ -1,6 +1,6 @@
 package com.agency.backend.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 @Entity

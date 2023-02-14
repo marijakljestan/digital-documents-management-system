@@ -14,6 +14,9 @@ services:
       AGENCY_DB_URL: ${AGENCY_DB_URL}
       AGENCY_DB_USER: ${AGENCY_DB_USER}
       AGENCY_DB_PASSWORD: ${AGENCY_DB_PASSWORD}
+      ELASTICSEARCH_CLUSTER_NAME: ${ELASTICSEARCH_CLUSTER_NAME}
+      ELASTIC_SEARCH_HOST: ${ELASTIC_SEARCH_HOST}
+      ELASTIC_SEARCH_PORT: ${ELASTIC_SEARCH_PORT}
     volumes:
       - type: bind
         source: ./logs
@@ -32,7 +35,9 @@ services:
       POSTGRES_USER: ${AGENCY_DB_USER}
       POSTGRES_PASSWORD: ${AGENCY_DB_PASSWORD}
       POSTGRES_DB: ${AGENCY_DB_NAME}
-      POSTGRES_HOST: ${AGENCY_DB_HOST} 
+      POSTGRES_HOST: ${AGENCY_DB_HOST}
+    ports:
+      - 5432:5432   
 
   pgadmin:
     container_name: pgadmin
