@@ -34,9 +34,9 @@ public class Candidate extends BaseEntity{
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String cv;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String coverLetter;
 }

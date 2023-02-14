@@ -29,14 +29,15 @@ public class FileSystemStorageService implements StorageService {
     private final Path rootLocation = Paths.get(ROOT_LOCATION);
 
     @Override
-    public void store(MultipartFile file, String path) {
+    public String store(MultipartFile file, String path) {
         try {
             if (file.isEmpty())
                 throw new StorageException("Failed to store empty file.");
 
             byte[] bytes = file.getBytes();
             String rootPath = ROOT_LOCATION + path;
-            Files.write(Paths.get(rootPath), bytes);
+            Path filePath = Files.write(Paths.get(rootPath), bytes);
+            return filePath.toString();
         }
         catch (IOException e) { throw new StorageException("Failed to store file.", e); }
     }

@@ -14,6 +14,8 @@ import javax.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
+
 import static com.agency.backend.AgencyApplication.LOGGER_INFO;
 
 @Service
@@ -42,7 +44,8 @@ public class CandidateServiceImpl implements CandidateService {
     private Candidate processCandidateData(RegisterCandidateDto candidateDto) {
         Candidate candidate = CandidateEntityMapper.toModel(candidateDto);
         candidateDto.setId(candidateRepository.save(candidate).getId());
-        candidate.setCv(storeCandidateCV(candidateDto));
+        String cvPath = storeCandidateCV(candidateDto);
+        candidate.setCv(cvPath);
         candidate.setCoverLetter(storeCandidateCoverLetter(candidateDto));
         return candidate;
     }
@@ -51,17 +54,17 @@ public class CandidateServiceImpl implements CandidateService {
         String fileName = new StringBuilder(candidateDto.getId()).append("_")
                                 .append(candidateDto.getFirstName()).append("_").append(candidateDto.getLastName())
                                 .append("_cv").append(".pdf").toString();
-        String directoryPath = "cv/" + fileName;
-        fileStorageService.store(candidateDto.getCv(), directoryPath);
-        return directoryPath;
+        String directoryPath = "cv"  + File.separator + fileName;
+        String ret = fileStorageService.store(candidateDto.getCv(), directoryPath);
+        LOGGER_INFO.info("\n\n SAVE CV {}", ret);
+        return ret;
     }
 
     private String storeCandidateCoverLetter(RegisterCandidateDto candidateDto) {
         String fileName = new StringBuilder(candidateDto.getId()).append("_")
                                     .append(candidateDto.getFirstName()).append("_").append(candidateDto.getLastName())
                                     .append("_cover_letter").append(".pdf").toString();
-        String directoryPath = "coverLetters/" + fileName;
-        fileStorageService.store(candidateDto.getCoverLetter(), directoryPath);
-        return directoryPath;
+        String directoryPath = "coverLetters"  + File.separator + fileName;
+        return fileStorageService.store(candidateDto.getCoverLetter(), directoryPath);
     }
 }

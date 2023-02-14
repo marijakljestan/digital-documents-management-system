@@ -13,7 +13,8 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 import org.springframework.http.HttpHeaders;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages= "com.agency.backend.repository")
+@SuppressWarnings("deprecation")
+@EnableElasticsearchRepositories
 public class ElasticsearchConfiguration {
 
     @Value("${elasticsearch.host}")
@@ -28,8 +29,6 @@ public class ElasticsearchConfiguration {
 
     @Bean
     public RestHighLevelClient restClient() {
-
-
         RestClientBuilder builder = RestClient.builder(new HttpHost(esHost, esPort, "http"))
                 .setDefaultHeaders(compatibilityHeaders());
 
@@ -37,7 +36,7 @@ public class ElasticsearchConfiguration {
     }
 
     private Header[] compatibilityHeaders() {
-        return new Header[]{new BasicHeader(HttpHeaders.ACCEPT, "application/vnd.elasticsearch+json;compatible-with=7"),
-                        new BasicHeader(HttpHeaders.CONTENT_TYPE, "application/vnd.elasticsearch+json;compatible-with=7")};
+        return new Header[]{new BasicHeader(HttpHeaders.ACCEPT, "application/json"),
+                new BasicHeader(HttpHeaders.CONTENT_TYPE, "application/json")};
     }
 }
