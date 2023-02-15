@@ -1,0 +1,29 @@
+package com.agency.backend.controller;
+
+import com.agency.backend.dto.SearchResult;
+import com.agency.backend.dto.SimpleQueryDto;
+import com.agency.backend.service.interfaces.ElasticsearchService;
+import lombok.AllArgsConstructor;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
+import java.util.List;
+
+@RestController
+@RequestMapping(value="/search", produces = MediaType.APPLICATION_JSON_VALUE)
+@AllArgsConstructor
+public class SearchController {
+
+    private final ElasticsearchService elasticSearchService;
+
+    @GetMapping(value = "/field")
+    public ResponseEntity<List<SearchResult>> searchByFields(@RequestBody List<SimpleQueryDto> queryDto) throws IOException {
+        List<SearchResult> searchResults = elasticSearchService.searchByFields(queryDto);
+        return ResponseEntity.ok(searchResults);
+    }
+}

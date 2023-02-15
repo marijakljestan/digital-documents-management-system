@@ -15,6 +15,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.util.UUID;
 
 import static com.agency.backend.AgencyApplication.LOGGER_INFO;
 
@@ -36,6 +37,7 @@ public class CandidateServiceImpl implements CandidateService {
         CandidateIndexUnit candidateIndexUnit = candidateIndexBuilder.getIndexUnit(candidate);
         candidateIndexingService.addCandidate(candidateIndexUnit);
         LOGGER_INFO.info("CANDIDATE SERVICE: register - saving candidate...");
+        //return candidate.getId();
         try {
             return candidateRepository.save(candidate).getId();
         }catch(RuntimeException e) { throw new CandidateAlreadyRegisteredException(); }
@@ -43,6 +45,7 @@ public class CandidateServiceImpl implements CandidateService {
 
     private Candidate processCandidateData(RegisterCandidateDto candidateDto) {
         Candidate candidate = CandidateEntityMapper.toModel(candidateDto);
+        String id =  UUID.randomUUID().toString();
         candidateDto.setId(candidateRepository.save(candidate).getId());
         String cvPath = storeCandidateCV(candidateDto);
         candidate.setCv(cvPath);

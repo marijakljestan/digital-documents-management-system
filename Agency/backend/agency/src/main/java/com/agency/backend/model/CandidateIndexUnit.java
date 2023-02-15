@@ -9,7 +9,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(indexName = CandidateIndexUnit.INDEX_NAME)
+@Document(indexName = CandidateIndexUnit.INDEX_NAME, shards = 1, replicas = 0)
 public class CandidateIndexUnit extends BaseIndexUnit {
 
     public static final String INDEX_NAME = "candidates";
