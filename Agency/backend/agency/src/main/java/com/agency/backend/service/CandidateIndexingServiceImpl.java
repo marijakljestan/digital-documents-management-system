@@ -24,6 +24,6 @@ public class CandidateIndexingServiceImpl implements CandidateIndexingService {
 
     @Override
     public void deleteCandidate(CandidateIndexUnit indexUnit) {
-         this.candidateIndexRepository.delete(indexUnit);
+        this.candidateIndexRepository.delete(indexUnit);
     }
 }
