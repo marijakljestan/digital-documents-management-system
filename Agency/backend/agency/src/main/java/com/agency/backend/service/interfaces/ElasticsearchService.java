@@ -8,5 +8,11 @@ import java.util.List;
 
 public interface ElasticsearchService {
 
-    List<SearchResult> searchByFields(List<SimpleQueryDto> queryDto) throws IOException;
+    List<SearchResult> searchByFields(List<SimpleQueryDto> queryDto);
+
+    List<SearchResult> searchByCvContent(String cvContent);
+
+    List<SearchResult> searchByCoverLetterContent(String coverLetterContent);
+
+    List<SearchResult> searchByPhrase(SimpleQueryDto simpleQueryDto);
 }
