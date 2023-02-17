@@ -1,6 +1,7 @@
 package com.agency.backend.service.interfaces;
 
 import com.agency.backend.dto.AdvancedQueryDto;
+import com.agency.backend.dto.GeospatialSearchDto;
 import com.agency.backend.dto.SearchResult;
 import com.agency.backend.dto.SimpleQueryDto;
 
@@ -20,4 +21,6 @@ public interface ElasticsearchService {
     List<SearchResult> searchByPhrase(SimpleQueryDto simpleQueryDto);
 
     List<SearchResult> searchByBooleanQuery(AdvancedQueryDto advancedQueryDto);
+
+    List<SearchResult> geospatialSearch(GeospatialSearchDto geospatialSearchDto);
 }

@@ -1,6 +1,7 @@
 package com.agency.backend.controller;
 
 import com.agency.backend.dto.AdvancedQueryDto;
+import com.agency.backend.dto.GeospatialSearchDto;
 import com.agency.backend.dto.SearchResult;
 import com.agency.backend.dto.SimpleQueryDto;
 import com.agency.backend.service.interfaces.ElasticsearchService;
@@ -64,6 +65,14 @@ public class SearchController {
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByBooleanQuery - start.");
         List<SearchResult> searchResults = elasticSearchService.searchByBooleanQuery(advancedQueryDto);
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByBooleanQuery - end.");
+        return ResponseEntity.ok(searchResults);
+    }
+
+    @GetMapping(value = "/geospatial")
+    public ResponseEntity<List<SearchResult>> geospatialSearch(@RequestBody GeospatialSearchDto geospatialSearchDto) {
+        LOGGER_INFO.info("SEARCH CONTROLLER: geospatialSearch - start.");
+        List<SearchResult> searchResults = elasticSearchService.geospatialSearch(geospatialSearchDto);
+        LOGGER_INFO.info("SEARCH CONTROLLER: geospatialSearch - end.");
         return ResponseEntity.ok(searchResults);
     }
 }

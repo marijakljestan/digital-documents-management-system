@@ -1,17 +1,20 @@
 package com.agency.backend.service;
 
 import com.agency.backend.dto.AdvancedQueryDto;
+import com.agency.backend.dto.GeospatialSearchDto;
 import com.agency.backend.dto.SearchResult;
 import com.agency.backend.dto.SimpleQueryDto;
 import com.agency.backend.dto.enums.OperationType;
 import com.agency.backend.mapper.SearchResultMapper;
 import com.agency.backend.model.CandidateIndexUnit;
 import com.agency.backend.service.interfaces.ElasticsearchService;
+import com.agency.backend.service.interfaces.GeocodingService;
 import lombok.AllArgsConstructor;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.unit.DistanceUnit;
 import org.elasticsearch.index.query.*;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
@@ -19,6 +22,7 @@ import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.SearchOperations;
+import org.springframework.data.elasticsearch.core.geo.GeoPoint;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -39,11 +43,12 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
 
     private final String analyzer = CandidateIndexUnit.ANALYZER;
     private final RestHighLevelClient restHighLevelClient;
+    private final GeocodingService geocodingService;
 
     @Override
     public List<SearchResult> searchByField(SimpleQueryDto queryDto) {
         /** https://stackoverflow.com/questions/60867242/elasticsearch-match-vs-term-in-filter/60867368#60867368 **/
-        QueryBuilder queryBuilder = QueryBuilders.matchQuery(queryDto.getField(), queryDto.getValue());
+        MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery(queryDto.getField(), queryDto.getValue()).analyzer(analyzer);
         return executeSearch(queryBuilder);
     }
 
@@ -56,8 +61,8 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
             fields.add(dto.getField());
         }
 
-        String[] arr = new String[fields.size()];
-        BoolQueryBuilder searchQuery = buildSearchQuery(query.toString().trim(), fields.toArray(arr));
+        String[] arr = new String[queryDtos.size()];
+        MultiMatchQueryBuilder searchQuery = QueryBuilders.multiMatchQuery(query.toString().trim(), fields.toArray(arr)).analyzer(analyzer);
         return executeSearch(searchQuery);
     }
 
@@ -97,15 +102,16 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
         return executeSearch(boolQueryBuilder);
     }
 
-    private BoolQueryBuilder buildSearchQuery(String query, String[] fields) {
-        if (query == null || fields.length < 1)  return null;
+    @Override
+    public List<SearchResult> geospatialSearch(GeospatialSearchDto geospatialSearchDto) {
+        GeoPoint geoPoint = geocodingService.getGeoPointOfCity(geospatialSearchDto.getCity());
+        GeoDistanceQueryBuilder queryBuilder = QueryBuilders.geoDistanceQuery("address.location")
+                                .point(geoPoint.getLat(), geoPoint.getLon())
+                                .distance(geospatialSearchDto.getRadius(), DistanceUnit.KILOMETERS);
 
-        BoolQueryBuilder queryBuilder = new BoolQueryBuilder();
-        if(fields.length == 1)
-            return queryBuilder.must(QueryBuilders.matchQuery(fields[0], query).analyzer(analyzer));
-        else
-            return queryBuilder.must(QueryBuilders.multiMatchQuery(query, fields).analyzer(analyzer));
+        return executeSearch(queryBuilder);
     }
+
 
     private List<SearchResult> executeSearch(QueryBuilder searchQuery) {
         SearchRequest searchRequest = buildSearchRequest(searchQuery);

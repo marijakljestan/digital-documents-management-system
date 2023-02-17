@@ -1,25 +1,30 @@
 package com.agency.backend.model;
 
-import javax.persistence.*;
 import lombok.*;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
+import org.springframework.data.elasticsearch.annotations.GeoPointField;
+import org.springframework.data.elasticsearch.core.geo.GeoPoint;
 
-@Entity
-@Table
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Address extends BaseEntity{
+public class Address {
 
-    @Column(nullable = false)
+    @Field(type = FieldType.Keyword)
     private String streetName;
 
-    @Column(nullable = false)
+    @Field(type = FieldType.Keyword)
     private String streetNumber;
 
-    @Column(nullable = false)
+    @Field(type = FieldType.Keyword)
     private String city;
 
-    @Column(nullable = false)
+    @Field(type = FieldType.Keyword)
     private String country;
+
+    @GeoPointField
+    private GeoPoint location;
 }
