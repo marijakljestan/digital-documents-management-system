@@ -1,21 +1,28 @@
 package com.agency.backend.service;
 
+import com.agency.backend.dto.AdvancedQueryDto;
+import com.agency.backend.dto.GeospatialSearchDto;
 import com.agency.backend.dto.SearchResult;
 import com.agency.backend.dto.SimpleQueryDto;
+import com.agency.backend.dto.enums.OperationType;
 import com.agency.backend.mapper.SearchResultMapper;
 import com.agency.backend.model.CandidateIndexUnit;
 import com.agency.backend.service.interfaces.ElasticsearchService;
+import com.agency.backend.service.interfaces.GeocodingService;
 import lombok.AllArgsConstructor;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.unit.DistanceUnit;
 import org.elasticsearch.index.query.*;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
+import org.springframework.data.elasticsearch.core.SearchOperations;
+import org.springframework.data.elasticsearch.core.geo.GeoPoint;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -33,7 +40,17 @@ import static com.agency.backend.AgencyApplication.LOGGER_INFO;
 public class ElasticsearchServiceImpl implements ElasticsearchService {
 
     private final String candidateIndex = CandidateIndexUnit.INDEX_NAME;
+
+    private final String analyzer = CandidateIndexUnit.ANALYZER;
     private final RestHighLevelClient restHighLevelClient;
+    private final GeocodingService geocodingService;
+
+    @Override
+    public List<SearchResult> searchByField(SimpleQueryDto queryDto) {
+        /** https://stackoverflow.com/questions/60867242/elasticsearch-match-vs-term-in-filter/60867368#60867368 **/
+        MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery(queryDto.getField(), queryDto.getValue()).analyzer(analyzer);
+        return executeSearch(queryBuilder);
+    }
 
     @Override
     public List<SearchResult> searchByFields(List<SimpleQueryDto> queryDtos) {
@@ -44,38 +61,57 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
             fields.add(dto.getField());
         }
 
-        String[] arr = new String[fields.size()];
-        BoolQueryBuilder searchQuery = buildSearchQuery(query.toString().trim(), fields.toArray(arr));
+        String[] arr = new String[queryDtos.size()];
+        MultiMatchQueryBuilder searchQuery = QueryBuilders.multiMatchQuery(query.toString().trim(), fields.toArray(arr)).analyzer(analyzer);
         return executeSearch(searchQuery);
     }
 
     @Override
     public List<SearchResult> searchByCvContent(String cvContent) {
-        MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery("cvContent", cvContent).analyzer("serbian");
+        MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery("cvContent", cvContent).analyzer(analyzer);
         return executeSearch(queryBuilder);
     }
 
     @Override
     public List<SearchResult> searchByCoverLetterContent(String coverLetterContent) {
-        MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery("coverLetterContent", coverLetterContent).analyzer("serbian");
+        MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery("coverLetterContent", coverLetterContent).analyzer(analyzer);
         return executeSearch(queryBuilder);
     }
 
     @Override
     public List<SearchResult> searchByPhrase(SimpleQueryDto simpleQueryDto) {
-        MatchPhraseQueryBuilder queryBuilder = QueryBuilders.matchPhraseQuery(simpleQueryDto.getField(), simpleQueryDto.getValue()).analyzer("serbian");
+        MatchPhraseQueryBuilder queryBuilder = QueryBuilders.matchPhraseQuery(simpleQueryDto.getField(), simpleQueryDto.getValue()).analyzer(analyzer);
         return executeSearch(queryBuilder);
     }
 
-    private BoolQueryBuilder buildSearchQuery(String query, String[] fields) {
-        if (query == null || fields.length < 1)  return null;
-
-        BoolQueryBuilder queryBuilder = new BoolQueryBuilder();
-        if(fields.length == 1)
-            return queryBuilder.must(QueryBuilders.matchQuery(fields[0], query).analyzer("serbian"));
-        else
-            return queryBuilder.must(QueryBuilders.multiMatchQuery(query, fields).analyzer("serbian"));
+    @Override
+    public List<SearchResult> searchByBooleanQuery(AdvancedQueryDto advancedQueryDto) {
+        QueryBuilder queryBuilder1 = QueryBuilders.matchQuery(advancedQueryDto.getField1(), advancedQueryDto.getValue1()).analyzer(analyzer);
+        QueryBuilder queryBuilder2 = QueryBuilders.matchQuery(advancedQueryDto.getField2(), advancedQueryDto.getValue2()).analyzer(analyzer);
+        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+        if(advancedQueryDto.getOperation().equals(OperationType.AND)){
+            boolQueryBuilder.must(queryBuilder1);
+            boolQueryBuilder.must(queryBuilder2);
+        } else if(advancedQueryDto.getOperation().equals(OperationType.OR)){
+            boolQueryBuilder.should(queryBuilder1);
+            boolQueryBuilder.should(queryBuilder2);
+        } else if(advancedQueryDto.getOperation().equals(OperationType.NOT)){
+            boolQueryBuilder.must(queryBuilder1);
+            boolQueryBuilder.mustNot(queryBuilder2);
+        }
+        return executeSearch(boolQueryBuilder);
     }
+
+    @Override
+    public List<SearchResult> geospatialSearch(GeospatialSearchDto geospatialSearchDto) {
+        GeoPoint geoPoint = geocodingService.getGeoPointOfCity(geospatialSearchDto.getCity());
+        GeoDistanceQueryBuilder queryBuilder = QueryBuilders.geoDistanceQuery("address.location")
+                                .point(geoPoint.getLat(), geoPoint.getLon())
+                                .distance(geospatialSearchDto.getRadius(), DistanceUnit.KILOMETERS);
+
+        return executeSearch(queryBuilder);
+    }
+
 
     private List<SearchResult> executeSearch(QueryBuilder searchQuery) {
         SearchRequest searchRequest = buildSearchRequest(searchQuery);

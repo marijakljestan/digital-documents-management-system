@@ -37,7 +37,6 @@ public class CandidateServiceImpl implements CandidateService {
         CandidateIndexUnit candidateIndexUnit = candidateIndexBuilder.getIndexUnit(candidate);
         candidateIndexingService.addCandidate(candidateIndexUnit);
         LOGGER_INFO.info("CANDIDATE SERVICE: register - saving candidate...");
-        //return candidate.getId();
         try {
             return candidateRepository.save(candidate).getId();
         }catch(RuntimeException e) { throw new CandidateAlreadyRegisteredException(); }
@@ -45,10 +44,8 @@ public class CandidateServiceImpl implements CandidateService {
 
     private Candidate processCandidateData(RegisterCandidateDto candidateDto) {
         Candidate candidate = CandidateEntityMapper.toModel(candidateDto);
-        String id =  UUID.randomUUID().toString();
-        candidateDto.setId(candidateRepository.save(candidate).getId());
-        String cvPath = storeCandidateCV(candidateDto);
-        candidate.setCv(cvPath);
+        candidateDto.setId(UUID.randomUUID().toString());
+        candidate.setCv(storeCandidateCV(candidateDto));
         candidate.setCoverLetter(storeCandidateCoverLetter(candidateDto));
         return candidate;
     }
@@ -59,7 +56,6 @@ public class CandidateServiceImpl implements CandidateService {
                                 .append("_cv").append(".pdf").toString();
         String directoryPath = "cv"  + File.separator + fileName;
         String ret = fileStorageService.store(candidateDto.getCv(), directoryPath);
-        LOGGER_INFO.info("\n\n SAVE CV {}", ret);
         return ret;
     }
 
