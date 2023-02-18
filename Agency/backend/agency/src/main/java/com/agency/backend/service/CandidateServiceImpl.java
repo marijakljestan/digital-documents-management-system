@@ -43,27 +43,34 @@ public class CandidateServiceImpl implements CandidateService {
     }
 
     private Candidate processCandidateData(RegisterCandidateDto candidateDto) {
+        LOGGER_INFO.info("CANDIDATE SERVICE: processCandidateData - start.");
         Candidate candidate = CandidateEntityMapper.toModel(candidateDto);
         candidateDto.setId(UUID.randomUUID().toString());
         candidate.setCv(storeCandidateCV(candidateDto));
         candidate.setCoverLetter(storeCandidateCoverLetter(candidateDto));
+        LOGGER_INFO.info("CANDIDATE SERVICE: processCandidateData - end.");
         return candidate;
     }
 
     private String storeCandidateCV(RegisterCandidateDto candidateDto) {
+        LOGGER_INFO.info("CANDIDATE SERVICE: storeCandidateCV - start.");
         String fileName = new StringBuilder(candidateDto.getId()).append("_")
                                 .append(candidateDto.getFirstName()).append("_").append(candidateDto.getLastName())
                                 .append("_cv").append(".pdf").toString();
         String directoryPath = "cv"  + File.separator + fileName;
         String ret = fileStorageService.store(candidateDto.getCv(), directoryPath);
+        LOGGER_INFO.info("CANDIDATE SERVICE: storeCandidateCV - end.");
         return ret;
     }
 
     private String storeCandidateCoverLetter(RegisterCandidateDto candidateDto) {
+        LOGGER_INFO.info("CANDIDATE SERVICE: storeCandidateCoverLetter - start.");
         String fileName = new StringBuilder(candidateDto.getId()).append("_")
                                     .append(candidateDto.getFirstName()).append("_").append(candidateDto.getLastName())
                                     .append("_cover_letter").append(".pdf").toString();
         String directoryPath = "coverLetters"  + File.separator + fileName;
-        return fileStorageService.store(candidateDto.getCoverLetter(), directoryPath);
+        String ret = fileStorageService.store(candidateDto.getCoverLetter(), directoryPath);
+        LOGGER_INFO.info("CANDIDATE SERVICE: storeCandidateCoverLetter - end.");
+        return ret;
     }
 }
