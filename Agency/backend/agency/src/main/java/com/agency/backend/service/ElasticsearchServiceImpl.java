@@ -114,36 +114,44 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
 
 
     private List<SearchResult> executeSearch(QueryBuilder searchQuery) {
+        LOGGER_INFO.info("ES SERVICE: executeSearch - start.");
         SearchRequest searchRequest = buildSearchRequest(searchQuery);
         List<SearchResult> results = new ArrayList<>();
         try {
+            LOGGER_INFO.info("ES SERVICE: executeSearch - sending search request...");
             SearchResponse searchResponse = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
             results = processSearchHits(searchResponse.getHits().getHits());
         } catch (IOException e) {
             LOGGER_ERROR.error("ES SERVICE: executeSearch - ", e);
         }
+        LOGGER_INFO.info("ES SERVICE: executeSearch - end.");
         return results;
     }
 
     private  List<SearchResult> processSearchHits(SearchHit[] searchHits) {
+        LOGGER_INFO.info("ES SERVICE: processSearchHits - start.");
         List<SearchResult> results = new ArrayList<>();
         for (SearchHit hit : searchHits) {
             SearchResult result = SearchResultMapper.toSearchResult(hit);
             result.setHighlight(getHighlightContent(hit));
             results.add(result);
         }
+        LOGGER_INFO.info("ES SERVICE: processSearchHits - end.");
         return results;
     }
 
     private String getHighlightContent(SearchHit hit) {
+        LOGGER_INFO.info("ES SERVICE: getHighlightContent - start.");
         Map<String, HighlightField> highlightFields = hit.getHighlightFields();
         if(highlightFields.isEmpty()) return "";
 
         HighlightField highlightedField = highlightFields.get("cvContent");
+        LOGGER_INFO.info("ES SERVICE: getHighlightContent - end.");
         return highlightedField.fragments()[0].string();
     }
 
     private SearchRequest buildSearchRequest(QueryBuilder searchQuery) {
+        LOGGER_INFO.info("ES SERVICE: buildSearchRequest - start.");
         HighlightBuilder highlightBuilder = getHighlightBuilder();
 
         SearchRequest searchRequest = new SearchRequest(candidateIndex);
@@ -151,15 +159,18 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
         sourceBuilder.query(searchQuery);
         sourceBuilder.highlighter(highlightBuilder);
         searchRequest.source(sourceBuilder);
+        LOGGER_INFO.info("ES SERVICE: buildSearchRequest - end.");
         return searchRequest;
     }
 
     private static HighlightBuilder getHighlightBuilder() {
+        LOGGER_INFO.info("ES SERVICE: getHighlightBuilder - start.");
         HighlightBuilder highlightBuilder = new HighlightBuilder();
         highlightBuilder.field("cvContent");
         highlightBuilder.preTags("<em>");
         highlightBuilder.postTags("</em>");
         highlightBuilder.fragmentSize(150);
+        LOGGER_INFO.info("ES SERVICE: getHighlightBuilder - end.");
         return highlightBuilder;
     }
 }

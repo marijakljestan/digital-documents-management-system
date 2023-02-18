@@ -1,0 +1,34 @@
+2023-02-18 11:08:08.267 INFO  agency-info - SEARCH CONTROLLER: searchByField - start.
+2023-02-18 11:08:08.774 INFO  agency-info - SEARCH CONTROLLER: searchByField - end.
+2023-02-18 11:12:00.417 INFO  agency-info - SEARCH CONTROLLER: searchByField - start.
+2023-02-18 11:12:00.558 INFO  agency-info - SEARCH CONTROLLER: searchByField - end.
+2023-02-18 11:12:04.516 INFO  agency-info - SEARCH CONTROLLER: searchByBooleanQuery - start.
+2023-02-18 11:12:04.569 INFO  agency-info - SEARCH CONTROLLER: searchByBooleanQuery - end.
+2023-02-18 11:36:51.687 INFO  agency-info | SEARCH CONTROLLER: searchByBooleanQuery - start.
+2023-02-18 11:36:51.693 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-18 11:36:51.693 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-18 11:36:51.693 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-18 11:36:51.701 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-18 11:36:51.705 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-18 11:36:51.705 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-18 11:36:51.919 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-18 11:36:51.930 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-18 11:36:51.930 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-18 11:36:51.930 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-18 11:36:51.930 INFO  agency-info | SEARCH CONTROLLER: searchByBooleanQuery - end.
+2023-02-18 11:36:56.420 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-18 11:36:56.420 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-18 11:36:56.420 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-18 11:36:56.425 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-18 11:36:56.892 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-18 11:36:56.895 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-18 11:36:56.896 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-18 11:36:56.896 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-18 11:36:56.896 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-18 11:36:56.896 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-18 11:36:56.896 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-18 11:36:57.319 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-18 11:36:57.320 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-18 11:36:57.320 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-18 11:36:57.320 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-18 11:36:57.320 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
