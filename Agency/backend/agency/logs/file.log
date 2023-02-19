@@ -1607,3 +1607,867 @@ org.elasticsearch.ElasticsearchStatusException: Elasticsearch exception [type=in
 2023-02-19 18:18:59.162 INFO  agency-info | ES SERVICE: processSearchHits - end.
 2023-02-19 18:18:59.162 INFO  agency-info | ES SERVICE: executeSearch - end.
 2023-02-19 18:18:59.162 INFO  agency-info | SEARCH CONTROLLER: searchByMultipleFields - end.
+2023-02-19 18:56:22.688 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 18:56:22.693 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 18:56:22.693 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 18:56:22.693 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 18:56:22.694 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 18:56:22.695 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 18:56:22.696 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 18:56:22.781 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 18:56:22.782 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 18:56:22.782 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 18:56:22.782 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:00:22.861 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:00:22.861 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:00:22.861 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:00:22.861 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:00:22.861 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:00:22.861 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:00:22.861 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:00:22.869 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:00:22.870 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:00:22.870 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:00:22.870 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:09:12.029 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:09:12.029 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:09:12.029 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:09:12.029 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:09:12.029 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:09:12.029 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:09:12.029 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:09:12.046 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:09:12.046 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:09:12.046 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:09:12.046 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:09:17.770 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:09:17.770 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:09:17.770 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:09:17.770 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:09:17.771 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:09:17.771 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:09:17.771 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:09:17.781 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:09:17.782 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:09:17.782 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:09:17.782 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:16:09.322 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:16:09.322 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:16:09.322 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:16:09.322 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:16:09.322 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:16:09.322 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:16:09.322 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:16:09.328 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:16:09.329 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:16:09.329 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:16:09.329 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:21:09.151 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:21:09.152 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:21:09.152 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:21:09.152 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:21:09.152 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:21:09.152 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:21:09.152 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:21:09.211 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:21:09.212 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 19:21:09.212 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:21:09.213 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:21:09.213 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:27:31.703 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:27:31.705 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:27:31.705 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:27:31.705 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:27:31.705 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:27:31.706 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:27:31.706 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:27:31.765 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:27:31.765 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 19:27:31.766 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:27:31.766 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:27:31.766 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:28:01.239 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:28:01.239 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:28:01.240 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:28:01.240 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:28:01.240 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:28:01.240 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:28:01.240 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:28:01.255 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:28:01.255 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 19:28:01.255 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:28:01.255 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:28:01.255 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:50:07.722 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:50:07.722 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:50:07.722 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:50:07.722 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:50:07.722 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:50:07.722 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:50:07.722 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:50:07.731 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:50:07.732 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:50:07.732 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:50:07.732 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 19:58:11.360 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 19:58:11.363 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 19:58:11.363 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 19:58:11.363 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 19:58:11.363 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 19:58:11.364 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 19:58:11.364 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 19:58:11.452 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 19:58:11.453 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 19:58:11.453 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 19:58:11.453 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 19:58:11.453 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:00:25.473 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:00:25.474 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:00:25.474 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:00:25.474 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:00:25.474 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:00:25.474 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:00:25.474 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:00:25.490 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:00:25.490 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:00:25.490 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:00:25.490 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:00:25.490 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:03:41.725 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:03:41.725 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:03:41.725 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:03:41.725 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:03:41.725 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:03:41.725 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:03:41.725 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:03:41.739 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:03:41.739 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:03:41.739 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:03:41.739 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:03:41.739 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:04:10.581 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:04:10.581 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:04:10.582 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:04:10.582 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:04:10.582 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:04:10.582 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:04:10.582 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:04:10.592 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:04:10.592 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:04:10.592 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:04:10.592 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:04:10.592 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:04:27.375 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:04:27.375 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:04:27.375 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:04:27.375 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:04:27.375 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:04:27.375 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:04:27.375 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:04:27.387 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:04:27.387 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:04:27.387 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:04:27.387 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:04:27.387 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:06:16.287 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:06:16.287 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:06:16.287 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:06:16.287 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:06:16.287 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:06:16.288 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:06:16.288 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:06:16.299 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:06:16.300 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:06:16.300 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:06:16.300 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:06:16.300 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:06:40.191 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:06:40.192 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:06:40.192 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:06:40.192 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:06:40.192 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:06:40.192 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:06:40.192 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:06:40.202 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:06:40.203 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:06:40.203 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:06:40.203 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:06:40.203 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:06:44.968 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:06:44.969 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:06:44.969 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:06:44.969 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:06:44.969 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:06:44.969 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:06:44.969 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:06:44.976 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:06:44.976 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:06:44.976 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:06:44.976 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:06:44.977 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:06:54.982 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:06:54.982 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:06:54.982 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:06:54.982 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:06:54.982 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:06:54.982 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:06:54.982 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:06:54.993 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:06:54.994 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:06:54.994 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:06:54.994 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:06:54.994 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:07:51.983 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:07:51.983 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:07:51.983 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:07:51.983 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:07:51.983 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:07:51.983 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:07:51.983 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:07:51.995 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:07:51.996 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:07:51.996 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:07:51.996 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:07:51.996 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:08:27.139 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:08:27.139 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:08:27.139 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:08:27.139 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:08:27.139 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:08:27.139 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:08:27.139 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:08:27.153 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:08:27.153 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:08:27.153 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:08:27.153 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:08:27.153 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:09:14.935 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:09:14.935 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:09:14.935 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:09:14.935 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:09:14.936 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:09:14.936 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:09:14.936 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:09:14.945 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:09:14.945 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:09:14.946 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:09:14.946 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:09:14.946 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:11:42.873 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:11:42.873 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:11:42.873 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:11:42.873 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:11:42.873 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:11:42.873 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:11:42.873 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:11:42.894 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:11:42.894 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:11:42.894 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:11:42.894 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:11:42.894 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:12:16.081 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:12:16.081 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:12:16.082 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:12:16.082 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:12:16.082 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:12:16.082 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:12:16.082 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:12:16.092 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:12:16.092 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:12:16.092 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:12:16.092 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:12:16.092 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:12:46.706 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:12:46.706 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:12:46.706 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:12:46.707 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:12:46.707 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:12:46.707 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:12:46.707 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:12:46.717 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:12:46.717 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:12:46.717 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:12:46.717 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:12:46.717 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:17:07.086 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:17:07.087 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:17:07.087 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:17:07.087 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:17:07.087 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:17:07.087 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:17:07.087 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:17:07.117 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:17:07.117 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:17:07.117 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:17:07.117 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:17:07.117 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:20:27.301 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:20:27.301 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:20:27.301 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:20:27.301 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:20:27.301 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:20:27.301 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:20:27.301 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:20:27.318 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:20:27.318 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:20:27.319 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:20:27.319 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:20:27.319 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:22:03.937 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:22:03.937 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:22:03.937 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:22:03.937 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:22:03.937 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:22:03.937 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:22:03.937 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:22:03.949 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:22:03.950 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:22:03.950 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:22:03.950 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:22:03.950 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:22:45.693 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:22:45.694 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:22:45.694 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:22:45.694 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:22:45.694 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:22:45.694 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:22:45.694 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:22:45.709 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:22:45.709 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:22:45.709 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:22:45.709 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:22:45.709 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:27:19.330 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:27:19.331 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:27:19.332 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:27:19.332 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:27:19.332 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:27:19.332 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:27:19.332 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:27:19.378 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:27:19.378 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:27:19.378 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:27:19.378 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:27:19.378 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:27:51.414 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:27:51.414 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:27:51.414 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:27:51.414 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:27:51.414 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:27:51.414 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:27:51.415 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:27:51.430 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:27:51.430 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:27:51.430 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:27:51.431 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:27:51.431 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:28:53.923 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:28:53.923 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:28:53.923 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:28:53.923 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:28:53.923 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:28:53.923 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:28:53.923 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:28:53.935 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:28:53.935 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:28:53.935 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:28:53.935 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:28:53.935 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:30:07.186 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:30:07.186 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:30:07.186 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:30:07.186 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:30:07.186 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:30:07.186 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:30:07.186 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:30:07.197 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:30:07.198 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:30:07.198 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:30:07.198 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:30:07.198 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:31:51.199 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:31:51.199 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:31:51.199 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:31:51.199 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:31:51.199 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:31:51.199 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:31:51.199 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:31:51.210 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:31:51.210 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:31:51.210 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:31:51.210 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:32:11.222 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:32:11.223 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:32:11.223 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:32:11.223 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:32:11.223 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:32:11.223 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:32:11.223 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:32:11.233 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:32:11.233 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:32:11.233 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:32:11.233 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:32:11.233 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:32:32.007 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:32:32.007 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:32:32.007 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:32:32.007 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:32:32.007 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:32:32.007 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:32:32.007 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:32:32.016 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:32:32.017 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:32:32.017 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:32:32.017 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:32:32.017 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:32:48.394 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:32:48.394 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:32:48.394 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:32:48.394 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:32:48.394 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:32:48.394 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:32:48.394 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:32:48.402 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:32:48.403 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:32:48.403 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:32:48.403 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:35:49.937 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:35:49.937 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:35:49.937 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:35:49.937 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:35:49.937 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:35:49.937 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:35:49.937 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:35:49.948 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:35:49.948 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:35:49.948 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:35:49.948 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:35:49.948 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:57:38.412 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:57:38.416 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:57:38.416 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:57:38.416 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:57:38.416 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:57:38.416 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:57:38.416 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:57:38.490 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:57:38.491 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:57:38.491 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:57:38.491 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:57:38.491 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 20:59:43.475 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 20:59:43.475 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 20:59:43.475 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 20:59:43.475 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 20:59:43.475 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 20:59:43.475 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 20:59:43.475 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 20:59:43.496 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 20:59:43.496 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 20:59:43.496 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 20:59:43.496 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 20:59:43.496 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 21:07:35.238 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 21:07:35.245 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:07:35.245 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:07:35.245 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:07:35.257 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:07:35.265 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:07:35.265 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:07:35.481 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:07:35.494 ERROR agency-error | ES SERVICE: executeSearch - 
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "java.util.Map.get(Object)" is null
+	at com.agency.backend.mapper.SearchResultMapper.toSearchResult(SearchResultMapper.java:18)
+	at com.agency.backend.service.ElasticsearchServiceImpl.processSearchHits(ElasticsearchServiceImpl.java:135)
+	at com.agency.backend.service.ElasticsearchServiceImpl.executeSearch(ElasticsearchServiceImpl.java:123)
+	at com.agency.backend.service.ElasticsearchServiceImpl.searchByField(ElasticsearchServiceImpl.java:52)
+	at com.agency.backend.controller.SearchController.searchByField(SearchController.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-02-19 21:07:35.494 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:07:35.494 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 21:11:11.519 INFO  agency-info | CANDIDATE CONTROLLER: register - start.
+2023-02-19 21:11:11.562 INFO  agency-info | CANDIDATE SERVICE: register - start.
+2023-02-19 21:11:11.563 INFO  agency-info | CANDIDATE SERVICE: processCandidateData - start.
+2023-02-19 21:11:11.563 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCV - start.
+2023-02-19 21:11:11.564 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - start.
+2023-02-19 21:11:11.609 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - end.
+2023-02-19 21:11:11.610 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCV - end.
+2023-02-19 21:11:11.610 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCoverLetter - start.
+2023-02-19 21:11:11.610 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - start.
+2023-02-19 21:11:11.620 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - end.
+2023-02-19 21:11:11.621 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCoverLetter - end.
+2023-02-19 21:11:11.621 INFO  agency-info | CANDIDATE SERVICE: processCandidateData - end.
+2023-02-19 21:11:11.621 INFO  agency-info | CANDIDATE SERVICE: indexing candidate...
+2023-02-19 21:11:11.621 ERROR agency-error | PDF HANDLER: getTextContent - start.
+2023-02-19 21:11:11.925 ERROR agency-error | PDF HANDLER: getTextContent - end.
+2023-02-19 21:11:11.925 ERROR agency-error | PDF HANDLER: getTextContent - start.
+2023-02-19 21:11:11.989 ERROR agency-error | PDF HANDLER: getTextContent - end.
+2023-02-19 21:11:11.989 INFO  agency-info | GEOCODING SERVICE: getGeoPointFromAddress - start.
+2023-02-19 21:11:11.989 INFO  agency-info | GEOCODING SERVICE: getGeoPointFromAddress - end.
+2023-02-19 21:11:11.989 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 21:11:11.992 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 21:11:12.467 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 21:11:12.467 INFO  agency-info | CANDIDATE INDEXING SERVICE: addCandidate - saving candidate...
+2023-02-19 21:11:12.690 INFO  agency-info | CANDIDATE SERVICE: register - saving candidate...
+2023-02-19 21:11:12.768 INFO  agency-info | CANDIDATE CONTROLLER: registered candidate with id 564a6aab-9596-439f-b146-ddd33bfb08c6 - end of method.
+2023-02-19 21:11:54.047 INFO  agency-info | CANDIDATE CONTROLLER: register - start.
+2023-02-19 21:11:54.052 INFO  agency-info | CANDIDATE SERVICE: register - start.
+2023-02-19 21:11:54.052 INFO  agency-info | CANDIDATE SERVICE: processCandidateData - start.
+2023-02-19 21:11:54.052 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCV - start.
+2023-02-19 21:11:54.052 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - start.
+2023-02-19 21:11:54.061 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - end.
+2023-02-19 21:11:54.061 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCV - end.
+2023-02-19 21:11:54.061 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCoverLetter - start.
+2023-02-19 21:11:54.061 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - start.
+2023-02-19 21:11:54.071 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - end.
+2023-02-19 21:11:54.071 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCoverLetter - end.
+2023-02-19 21:11:54.071 INFO  agency-info | CANDIDATE SERVICE: processCandidateData - end.
+2023-02-19 21:11:54.071 INFO  agency-info | CANDIDATE SERVICE: indexing candidate...
+2023-02-19 21:11:54.071 ERROR agency-error | PDF HANDLER: getTextContent - start.
+2023-02-19 21:11:54.142 ERROR agency-error | PDF HANDLER: getTextContent - end.
+2023-02-19 21:11:54.143 ERROR agency-error | PDF HANDLER: getTextContent - start.
+2023-02-19 21:11:54.212 ERROR agency-error | PDF HANDLER: getTextContent - end.
+2023-02-19 21:11:54.212 INFO  agency-info | GEOCODING SERVICE: getGeoPointFromAddress - start.
+2023-02-19 21:11:54.212 INFO  agency-info | GEOCODING SERVICE: getGeoPointFromAddress - end.
+2023-02-19 21:11:54.212 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 21:11:54.212 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 21:11:54.821 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 21:11:54.821 INFO  agency-info | CANDIDATE INDEXING SERVICE: addCandidate - saving candidate...
+2023-02-19 21:11:54.884 INFO  agency-info | CANDIDATE SERVICE: register - saving candidate...
+2023-02-19 21:11:54.892 INFO  agency-info | CANDIDATE CONTROLLER: registered candidate with id 8f4e65ec-00a4-4fdd-9a96-08699b50208c - end of method.
+2023-02-19 21:12:06.498 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 21:12:06.503 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:12:06.503 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:12:06.503 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:12:06.510 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:12:06.515 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:12:06.516 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:12:06.626 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:12:06.636 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:06.637 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:06.637 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:12:06.637 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:12:06.637 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 21:12:14.357 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 21:12:14.357 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:12:14.357 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:12:14.357 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:12:14.357 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:12:14.357 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:12:14.357 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:12:14.370 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:12:14.370 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:14.370 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:12:14.370 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:12:14.370 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 21:12:28.232 INFO  agency-info | SEARCH CONTROLLER: searchByBooleanQuery - start.
+2023-02-19 21:12:28.233 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:12:28.233 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:12:28.233 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:12:28.233 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:12:28.233 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:12:28.233 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:12:28.248 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:12:28.248 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:28.249 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:28.249 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:12:28.249 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:12:28.249 INFO  agency-info | SEARCH CONTROLLER: searchByBooleanQuery - end.
+2023-02-19 21:12:43.646 INFO  agency-info | SEARCH CONTROLLER: searchByBooleanQuery - start.
+2023-02-19 21:12:43.646 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:12:43.646 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:12:43.646 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:12:43.646 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:12:43.646 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:12:43.646 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:12:43.657 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:12:43.657 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:43.657 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:12:43.657 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:12:43.657 INFO  agency-info | SEARCH CONTROLLER: searchByBooleanQuery - end.
+2023-02-19 21:12:58.704 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - start.
+2023-02-19 21:12:58.704 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:12:58.704 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:12:58.704 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:12:58.704 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:12:58.705 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:12:58.705 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:12:58.736 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:12:58.736 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:58.736 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:12:58.736 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:58.736 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:12:58.737 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:12:58.737 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:12:58.737 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:12:58.737 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:12:58.737 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - end.
+2023-02-19 21:13:20.883 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 21:13:20.883 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 21:13:20.883 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 21:13:20.883 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 21:13:21.274 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 21:13:21.281 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:13:21.281 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:13:21.281 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:13:21.281 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:13:21.281 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:13:21.281 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:13:21.305 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:13:21.305 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:13:21.305 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:13:21.305 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:13:21.306 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 21:13:27.677 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 21:13:27.678 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 21:13:27.678 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 21:13:27.678 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 21:13:27.933 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 21:13:27.933 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:13:27.933 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:13:27.933 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:13:27.933 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:13:27.933 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:13:27.933 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:13:27.943 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:13:27.944 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:13:27.944 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:13:27.944 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:13:27.944 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 21:15:03.337 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 21:15:03.337 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 21:15:03.337 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 21:15:03.337 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 21:15:03.864 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 21:15:03.864 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:15:03.864 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:15:03.864 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:15:03.864 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:15:03.864 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:15:03.864 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:15:03.876 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:15:03.876 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:15:03.876 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:15:03.876 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:15:03.876 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 21:18:13.458 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - start.
+2023-02-19 21:18:13.461 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:18:13.461 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:18:13.462 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:18:13.462 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:18:13.462 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:18:13.462 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:18:13.524 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:18:13.525 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:18:13.525 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:18:13.525 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:18:13.525 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:18:13.525 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:18:13.525 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:18:13.525 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:18:13.525 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:18:13.525 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - end.
+2023-02-19 21:18:37.875 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - start.
+2023-02-19 21:18:37.876 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:18:37.876 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:18:37.876 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:18:37.876 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:18:37.876 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:18:37.876 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:18:37.906 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:18:37.907 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:18:37.907 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:18:37.907 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:18:37.907 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:18:37.908 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:18:37.908 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:18:37.908 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:18:37.908 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:18:37.908 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - end.
+2023-02-19 21:19:25.481 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - start.
+2023-02-19 21:19:25.481 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:19:25.481 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:19:25.481 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:19:25.481 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:19:25.481 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:19:25.481 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:19:25.502 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:19:25.503 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:19:25.503 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:19:25.503 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:19:25.503 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:19:25.503 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:19:25.503 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:19:25.503 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:19:25.503 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:19:25.503 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - end.
+2023-02-19 21:20:05.285 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - start.
+2023-02-19 21:20:05.285 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 21:20:05.285 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 21:20:05.285 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 21:20:05.285 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 21:20:05.285 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 21:20:05.285 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 21:20:05.297 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 21:20:05.297 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:20:05.297 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:20:05.297 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:20:05.297 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:20:05.297 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 21:20:05.297 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 21:20:05.298 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 21:20:05.298 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 21:20:05.298 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - end.
+2023-02-19 22:13:54.212 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 22:13:54.217 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 22:13:54.217 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 22:13:54.217 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 22:13:54.218 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 22:13:54.220 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 22:13:54.220 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 22:13:54.328 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 22:13:54.330 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:13:54.330 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:13:54.330 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:13:54.330 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:13:54.330 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:13:54.331 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:13:54.331 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 22:13:54.331 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 22:13:54.331 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 22:17:56.109 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - start.
+2023-02-19 22:17:56.112 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 22:17:56.112 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 22:17:56.112 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 22:17:56.113 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 22:17:56.114 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 22:17:56.114 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 22:17:56.260 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 22:17:56.263 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:17:56.264 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:17:56.264 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:17:56.264 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:17:56.264 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:17:56.265 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:17:56.265 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 22:17:56.265 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 22:17:56.265 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - end.
+2023-02-19 22:18:25.553 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 22:18:25.554 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 22:18:25.555 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 22:18:25.555 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 22:18:25.955 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 22:18:25.955 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 22:18:25.955 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 22:18:25.956 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 22:18:25.956 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 22:18:25.956 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 22:18:25.956 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 22:18:25.978 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 22:18:25.978 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:18:25.978 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 22:18:25.978 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 22:18:25.978 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 22:19:11.662 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - start.
+2023-02-19 22:19:11.662 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 22:19:11.662 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 22:19:11.662 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 22:19:11.662 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 22:19:11.662 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 22:19:11.662 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 22:19:11.670 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 22:19:11.670 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 22:19:11.670 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 22:19:11.670 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - end.
+2023-02-19 22:19:16.953 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 22:19:16.954 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 22:19:16.954 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 22:19:16.954 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 22:19:16.954 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 22:19:16.954 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 22:19:16.954 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 22:19:16.960 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 22:19:16.960 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 22:19:16.960 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 22:19:16.960 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 22:19:23.190 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - start.
+2023-02-19 22:19:23.190 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 22:19:23.190 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 22:19:23.190 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 22:19:23.190 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 22:19:23.190 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 22:19:23.190 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 22:19:23.208 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 22:19:23.209 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:19:23.209 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:19:23.209 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:19:23.209 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:19:23.209 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:19:23.209 INFO  agency-info | ES SERVICE: getHighlightContent - end.
+2023-02-19 22:19:23.209 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 22:19:23.209 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 22:19:23.209 INFO  agency-info | SEARCH CONTROLLER: searchByCvContent - end.
+2023-02-19 22:32:34.884 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 22:32:34.892 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 22:32:34.892 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 22:32:34.892 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 22:32:34.893 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 22:32:34.894 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 22:32:34.894 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 22:32:34.967 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 22:32:34.968 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:32:34.968 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 22:32:34.968 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 22:32:34.968 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 22:32:47.406 INFO  agency-info | SEARCH CONTROLLER: searchByField - start.
+2023-02-19 22:32:47.406 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 22:32:47.406 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 22:32:47.406 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 22:32:47.406 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 22:32:47.406 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 22:32:47.406 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 22:32:47.418 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 22:32:47.419 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:32:47.419 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 22:32:47.419 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 22:32:47.419 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 22:32:47.419 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.

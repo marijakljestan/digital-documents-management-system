@@ -1,29 +1,36 @@
 import {axiosInstance} from "./AxiosInstance";
 
 export async function searchByField(simpleQueryDto) {
-    await axiosInstance.post('/search/field', simpleQueryDto);
+    const response = await axiosInstance.post('/search/field', simpleQueryDto)
+    return response.data;
 }
 
 export async function searchByFields(listOfSimpleQueryDto) {
-    await axiosInstance.post('/search/fields', listOfSimpleQueryDto);
+    const response = await axiosInstance.post('/search/fields', listOfSimpleQueryDto);
+    return response.data;
 }
 
 export async function searchByCVContent(cvContent) {
-    await axiosInstance.post('/search/cv', cvContent);
+    const response = await axiosInstance.post('/search/cv', cvContent);
+    return response.data;
 }
 
 export async function searchByCoverLetterContent(coverLetterContent) {
-    await axiosInstance.post('/search/cover-letter', coverLetterContent);
+    const response = await axiosInstance.post('/search/cover-letter', coverLetterContent);
+    return response.data;
 }
 
 export async function searchByPhrase(simpleQueryDto) {
-    await axiosInstance.post('/search/phrase', simpleQueryDto);
+    const response = await axiosInstance.post('/search/phrase', simpleQueryDto);
+    return response.data;
 }
 
 export async function booleanSearch(advancedQueryDto) {
-    await axiosInstance.post('/search/boolean', advancedQueryDto);
+    const response = await axiosInstance.post('/search/boolean', advancedQueryDto);
+    return response.data;
 }
 
 export async function geospatialSearch(geospatialFormData) {
-    await axiosInstance.post('/search/geospatial', geospatialFormData);
+    const response = await axiosInstance.post('/search/geospatial', geospatialFormData);
+    return response.data;
 }

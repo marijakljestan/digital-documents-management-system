@@ -1,15 +1,18 @@
 import classes from './GeospatialSearch.module.css';
 import React  from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import { ElasticsearchService } from '../../service/ElasticsearchService';
 
 function GeospatialSearch() {
 
+    const navigate = useNavigate();
     const [geospatialFormData, setGeospatialFormData] = useState({city: "", radius: 0});
 
-    function submithHandler(event) {
+    async function submithHandler(event) {
         event.preventDefault();
-        ElasticsearchService.geospatialSearch(geospatialFormData);
+        let data = await ElasticsearchService.geospatialSearch(geospatialFormData);
+        navigate('/search-results', { state: { candidates: data }})
     }
 
     function handleChange(e) {
