@@ -121,7 +121,7 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
             LOGGER_INFO.info("ES SERVICE: executeSearch - sending search request...");
             SearchResponse searchResponse = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
             results = processSearchHits(searchResponse.getHits().getHits());
-        } catch (IOException e) {
+        } catch (Exception e) {
             LOGGER_ERROR.error("ES SERVICE: executeSearch - ", e);
         }
         LOGGER_INFO.info("ES SERVICE: executeSearch - end.");
