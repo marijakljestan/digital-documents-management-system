@@ -7,8 +7,8 @@ function CandidateSearch(props) {
     return (
         <div className={classes.component}>
             <div className = {classes.selectField}>
-                    <select className={classes.customSelect}>
-                        <option selected disabled>Select field</option>
+                    <select className={classes.customSelect}  defaultValue="">
+                        <option value="" disabled>Select field</option>
                         <option value="firstName">First name</option>
                         <option value="lastName">Last name</option>
                         <option value="degree">Degree</option>

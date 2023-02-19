@@ -20,7 +20,7 @@ public class SearchController {
 
     private final ElasticsearchService elasticSearchService;
 
-    @GetMapping(value = "/field")
+    @PostMapping(value = "/field")
     public ResponseEntity<List<SearchResult>> searchByField(@RequestBody SimpleQueryDto queryDto) {
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByField - start.");
         List<SearchResult> searchResults = elasticSearchService.searchByField(queryDto);
@@ -28,7 +28,7 @@ public class SearchController {
         return ResponseEntity.ok(searchResults);
     }
 
-    @GetMapping(value = "/fields")
+    @PostMapping(value = "/fields")
     public ResponseEntity<List<SearchResult>> searchByMultipleFields(@RequestBody List<SimpleQueryDto> queryDto) {
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByMultipleFields - start.");
         List<SearchResult> searchResults = elasticSearchService.searchByFields(queryDto);
@@ -52,7 +52,7 @@ public class SearchController {
         return ResponseEntity.ok(searchResults);
     }
 
-    @GetMapping(value = "/phrase")
+    @PostMapping(value = "/phrase")
     public ResponseEntity<List<SearchResult>> searchByPhrase(@RequestBody SimpleQueryDto simpleQueryDto) {
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByPhrase - start.");
         List<SearchResult> searchResults = elasticSearchService.searchByPhrase(simpleQueryDto);
@@ -60,7 +60,7 @@ public class SearchController {
         return ResponseEntity.ok(searchResults);
     }
 
-    @GetMapping(value = "/boolean")
+    @PostMapping(value = "/boolean")
     public ResponseEntity<List<SearchResult>> searchByBooleanQuery(@RequestBody AdvancedQueryDto advancedQueryDto) {
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByBooleanQuery - start.");
         List<SearchResult> searchResults = elasticSearchService.searchByBooleanQuery(advancedQueryDto);
@@ -68,7 +68,7 @@ public class SearchController {
         return ResponseEntity.ok(searchResults);
     }
 
-    @GetMapping(value = "/geospatial")
+    @PostMapping(value = "/geospatial")
     public ResponseEntity<List<SearchResult>> geospatialSearch(@RequestBody GeospatialSearchDto geospatialSearchDto) {
         LOGGER_INFO.info("SEARCH CONTROLLER: geospatialSearch - start.");
         List<SearchResult> searchResults = elasticSearchService.geospatialSearch(geospatialSearchDto);

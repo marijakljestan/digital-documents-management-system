@@ -55,19 +55,12 @@
     width: 20%;
     height: 2.5rem;
     border: 1px solid rgb(126, 152, 192);
-}
-
-.geospatialSearchDiv{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.geoLabel{
-    width: 20%;
-    justify-content: flex-start;
-    color: rgb(63, 120, 205);
-    padding-left: 0%;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    padding-left: 0.1rem;
+    font-family: inherit;
+    outline: none;
+    color: #727272;
 }
 
 .search {
@@ -80,27 +73,6 @@
     height: 2.5rem;
 }
 
-.geospatialFields{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.geospatial_search_input{
-    background-color: transparent;
-    border: none;
-    width: 100%;
-    font-size: 1rem;
-    padding-left: 0.5rem;
-    font-family: inherit;
-    color: var(--main-text);
-}
-
-.geospatial_search_input:focus {
-    outline: none;
-}
 
 .left{
     display: flex;
@@ -137,7 +109,7 @@
 }
 
 .button {
-    width: 9rem;
+    width: 8rem;
     height: 2.5rem;
     background-color: rgb(126, 152, 192);
     color: white;

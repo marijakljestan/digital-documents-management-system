@@ -988,3 +988,146 @@ org.elasticsearch.ElasticsearchStatusException: Elasticsearch exception [type=in
 		... 46 common frames omitted
 2023-02-19 11:29:36.678 INFO  agency-info | ES SERVICE: executeSearch - end.
 2023-02-19 11:29:36.678 INFO  agency-info | SEARCH CONTROLLER: searchByField - end.
+2023-02-19 15:03:08.931 INFO  agency-info | CANDIDATE CONTROLLER: register - start.
+2023-02-19 15:03:09.294 INFO  agency-info | CANDIDATE SERVICE: register - start.
+2023-02-19 15:03:09.295 INFO  agency-info | CANDIDATE SERVICE: processCandidateData - start.
+2023-02-19 15:03:09.352 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCV - start.
+2023-02-19 15:03:09.358 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - start.
+2023-02-19 15:03:09.424 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - end.
+2023-02-19 15:03:09.424 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCV - end.
+2023-02-19 15:03:09.424 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCoverLetter - start.
+2023-02-19 15:03:09.425 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - start.
+2023-02-19 15:03:09.443 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - end.
+2023-02-19 15:03:09.444 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCoverLetter - end.
+2023-02-19 15:03:09.444 INFO  agency-info | CANDIDATE SERVICE: processCandidateData - end.
+2023-02-19 15:03:09.444 INFO  agency-info | CANDIDATE SERVICE: indexing candidate...
+2023-02-19 15:03:09.444 ERROR agency-error | PDF HANDLER: getTextContent - start.
+2023-02-19 15:03:10.526 ERROR agency-error | PDF HANDLER: getTextContent - end.
+2023-02-19 15:03:10.527 ERROR agency-error | PDF HANDLER: getTextContent - start.
+2023-02-19 15:03:10.760 ERROR agency-error | PDF HANDLER: getTextContent - end.
+2023-02-19 15:03:10.762 INFO  agency-info | GEOCODING SERVICE: getGeoPointFromAddress - start.
+2023-02-19 15:03:10.762 INFO  agency-info | GEOCODING SERVICE: getGeoPointFromAddress - end.
+2023-02-19 15:03:10.762 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 15:03:10.773 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 15:03:14.942 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 15:03:14.943 INFO  agency-info | CANDIDATE INDEXING SERVICE: addCandidate - saving candidate...
+2023-02-19 15:03:17.728 INFO  agency-info | CANDIDATE SERVICE: register - saving candidate...
+2023-02-19 15:03:18.089 INFO  agency-info | CANDIDATE CONTROLLER: registered candidate with id 14262d99-5d67-48fc-9a11-657abc11180f - end of method.
+2023-02-19 15:03:43.638 INFO  agency-info | CANDIDATE CONTROLLER: register - start.
+2023-02-19 15:03:43.722 INFO  agency-info | CANDIDATE SERVICE: register - start.
+2023-02-19 15:03:43.723 INFO  agency-info | CANDIDATE SERVICE: processCandidateData - start.
+2023-02-19 15:03:43.723 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCV - start.
+2023-02-19 15:03:43.723 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - start.
+2023-02-19 15:03:43.748 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - end.
+2023-02-19 15:03:43.748 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCV - end.
+2023-02-19 15:03:43.748 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCoverLetter - start.
+2023-02-19 15:03:43.748 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - start.
+2023-02-19 15:03:43.767 INFO  agency-info | FILE SYSTEM STORAGE SERVICE: store - end.
+2023-02-19 15:03:43.770 INFO  agency-info | CANDIDATE SERVICE: storeCandidateCoverLetter - end.
+2023-02-19 15:03:43.778 INFO  agency-info | CANDIDATE SERVICE: processCandidateData - end.
+2023-02-19 15:03:43.779 INFO  agency-info | CANDIDATE SERVICE: indexing candidate...
+2023-02-19 15:03:43.779 ERROR agency-error | PDF HANDLER: getTextContent - start.
+2023-02-19 15:03:44.012 ERROR agency-error | PDF HANDLER: getTextContent - end.
+2023-02-19 15:03:44.015 ERROR agency-error | PDF HANDLER: getTextContent - start.
+2023-02-19 15:03:44.192 ERROR agency-error | PDF HANDLER: getTextContent - end.
+2023-02-19 15:03:44.193 INFO  agency-info | GEOCODING SERVICE: getGeoPointFromAddress - start.
+2023-02-19 15:03:44.193 INFO  agency-info | GEOCODING SERVICE: getGeoPointFromAddress - end.
+2023-02-19 15:03:44.193 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 15:03:44.193 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 15:03:44.582 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 15:03:44.583 INFO  agency-info | CANDIDATE INDEXING SERVICE: addCandidate - saving candidate...
+2023-02-19 15:03:46.452 INFO  agency-info | CANDIDATE SERVICE: register - saving candidate...
+2023-02-19 15:04:15.986 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 15:04:15.987 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 15:04:15.987 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 15:04:15.987 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 15:04:19.628 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 15:04:19.644 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 15:04:19.645 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 15:04:19.645 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 15:04:19.646 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 15:04:19.647 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 15:04:19.647 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 15:04:20.007 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 15:04:20.007 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 15:04:20.007 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 15:04:20.007 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 15:04:22.478 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 15:04:22.479 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 15:04:22.479 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 15:04:22.479 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 15:04:22.916 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 15:04:22.917 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 15:04:22.917 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 15:04:22.917 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 15:04:22.917 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 15:04:22.917 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 15:04:22.917 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 15:04:23.191 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 15:04:23.258 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 15:04:23.259 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 15:04:23.259 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 15:04:23.259 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 15:25:14.493 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 15:25:14.495 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 15:25:14.495 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 15:25:14.501 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 15:25:15.285 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 15:25:15.294 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 15:25:15.294 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 15:25:15.294 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 15:25:15.308 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 15:25:15.315 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 15:25:15.315 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 15:25:15.570 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 15:25:15.583 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 15:25:15.584 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 15:25:15.584 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 15:25:15.584 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 15:25:43.896 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 15:25:43.896 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 15:25:43.897 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 15:25:43.897 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 15:25:44.349 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 15:25:44.350 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 15:25:44.350 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 15:25:44.350 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 15:25:44.351 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 15:25:44.351 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 15:25:44.351 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 15:25:44.371 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 15:25:44.372 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 15:25:44.373 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 15:25:44.373 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 15:25:44.373 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 16:46:33.473 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 16:46:33.479 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 16:46:33.479 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 16:46:33.484 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 16:46:34.210 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 16:46:34.221 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 16:46:34.221 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 16:46:34.221 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 16:46:34.234 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 16:46:34.243 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 16:46:34.243 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 16:46:34.371 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 16:46:34.387 INFO  agency-info | ES SERVICE: getHighlightContent - start.
+2023-02-19 16:46:34.387 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 16:46:34.387 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 16:46:34.387 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
+2023-02-19 16:46:41.389 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - start.
+2023-02-19 16:46:41.390 INFO  agency-info | GEOCODING SERVICE: getGeoPointOfCity
+2023-02-19 16:46:41.390 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - start.
+2023-02-19 16:46:41.390 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - sending request to OpenCage API...
+2023-02-19 16:46:41.793 INFO  agency-info | GEOCODING SERVICE: getGeoPoint - obtaining response data...
+2023-02-19 16:46:41.794 INFO  agency-info | ES SERVICE: executeSearch - start.
+2023-02-19 16:46:41.794 INFO  agency-info | ES SERVICE: buildSearchRequest - start.
+2023-02-19 16:46:41.794 INFO  agency-info | ES SERVICE: getHighlightBuilder - start.
+2023-02-19 16:46:41.795 INFO  agency-info | ES SERVICE: getHighlightBuilder - end.
+2023-02-19 16:46:41.795 INFO  agency-info | ES SERVICE: buildSearchRequest - end.
+2023-02-19 16:46:41.795 INFO  agency-info | ES SERVICE: executeSearch - sending search request...
+2023-02-19 16:46:41.804 INFO  agency-info | ES SERVICE: processSearchHits - start.
+2023-02-19 16:46:41.804 INFO  agency-info | ES SERVICE: processSearchHits - end.
+2023-02-19 16:46:41.804 INFO  agency-info | ES SERVICE: executeSearch - end.
+2023-02-19 16:46:41.804 INFO  agency-info | SEARCH CONTROLLER: geospatialSearch - end.
