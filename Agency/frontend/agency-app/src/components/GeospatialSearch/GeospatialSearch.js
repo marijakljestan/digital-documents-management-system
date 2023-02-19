@@ -32,7 +32,7 @@ function GeospatialSearch() {
 
     return(
         <form onSubmit={(e) => submithHandler(e)} className={classes.geospatialSearchDiv}>
-            <h3 className={classes.note}>Geospatial search</h3>
+            <h3 className={classes.note}> Geospatial search </h3>
             <div className={classes.geospatialFields}>
                 <label className={classes.geoLabel}>City:</label>
                 <div className={classes.search}>

@@ -4,10 +4,11 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function CandidateSearch(props) {
+
     return (
         <div className={classes.component}>
             <div className = {classes.selectField}>
-                    <select className={classes.customSelect}  defaultValue="">
+                    <select className={classes.customSelect}  defaultValue="" onChange = {props.handleFieldChange}>
                         <option value="" disabled>Select field</option>
                         <option value="firstName">First name</option>
                         <option value="lastName">Last name</option>
@@ -18,7 +19,7 @@ function CandidateSearch(props) {
             </div>
             <div className={classes.search}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className={classes.icon} />
-                <input type='text' placeholder={props.placeholder} />
+                <input type='text' placeholder={props.placeholder} onChange = {props.handleValueChange}/>
             </div>
         </div>
     )

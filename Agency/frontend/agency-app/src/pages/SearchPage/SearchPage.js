@@ -10,20 +10,66 @@ import SearchResult from '../../components/SearchResult/SearchResult';
 function SearchPage() {
 
     const navigate = useNavigate();
+    const [firstQuery, setFirstQuery] = useState({field: "", value: ""});
+    const [secondQuery, setSecondQuery] = useState({field: "", value: ""});
     const [booleanOperation, setBooleanOperation] = useState();
+    const [enabledPhraseSearch, setEnabledPhraseSearch] = useState(false);
    
 
+    function handleFieldSearchSubmit() {
+    
+        if(booleanOperation) {
+            ElasticsearchService.booleanSearch(firstQuery, secondQuery, booleanOperation);
+        } 
+        else if(enabledPhraseSearch) {
+            ElasticsearchService.searchByPhrase(firstQuery);
+        } 
+        else if(firstQuery.field === "cvContent") {
+            ElasticsearchService.searchByCVContent(firstQuery.value);
+        } 
+        else if (firstQuery.field === "coverLetterContent") {
+            ElasticsearchService.searchByCoverLetterContent(firstQuery.value);
+        } 
+        else if(secondQuery.field !== "") {
+            ElasticsearchService.searchByFields(firstQuery, secondQuery);
+        } 
+        else {
+            ElasticsearchService.searchByField(firstQuery);
+        }
+    }
+
+    function handleFirstFieldChange(e) {
+        setFirstQuery(previousState => ({
+            ...previousState,
+            field: e.target.value
+        }));
+    }
+
+    function handleFirstValueChange(e) {
+        setFirstQuery(previousState => ({
+            ...previousState,
+            value: e.target.value
+        }));
+    }
+
+    function handleSecondFieldChange(e) {
+        setSecondQuery(previousState => ({
+            ...previousState,
+            field: e.target.value
+        }));
+    }
+
+    function handleSecondValueChange(e) {
+        setSecondQuery(previousState => ({
+            ...previousState,
+            value: e.target.value
+        }));
+    }
+
     function handleOperationChange(e) {
-        console.log('previous ' + booleanOperation)
-        const targetValue = e.target.value;
-        console.log('selected ' + targetValue)
-        setBooleanOperation(previouseState => (targetValue));
-        console.log('now ' + booleanOperation)
+        setBooleanOperation(previouseState => (e.target.value));
     } 
 
-    function handleFieldSearchSubmit() {
-        console.log(booleanOperation);
-    }
 
     return (
         <div className={classes.pageWrapper}>
@@ -31,7 +77,7 @@ function SearchPage() {
                 <h1 className={classes.caption}> Find your perfect candidate</h1>
                 
                 <h3 className={classes.note}>Field search</h3>
-                <CandidateSearch />
+                <CandidateSearch handleFieldChange={handleFirstFieldChange} handleValueChange={handleFirstValueChange}/>
                 <label className={classes.note}> *Only if you want Boolean search, for regular search you can ignore this.</label>
                 <div className={classes.operationDiv}>
                     <select className={classes.customSelect} defaultValue="" onChange={handleOperationChange}>
@@ -42,18 +88,20 @@ function SearchPage() {
                     </select>
                 </div>
                 <label className={classes.note}> *If you're searching just by one field, you can ignore this.</label>
-                <CandidateSearch />
+                <CandidateSearch handleFieldChange={handleSecondFieldChange} handleValueChange={handleSecondValueChange}/>
                 <div className={classes.btnDiv}>
+                    <div className={classes.checkboxDiv}>
+                        <input type="checkbox" onChange={() => setEnabledPhraseSearch(!enabledPhraseSearch)}/> 
+                        <label className={classes.note}> Enable phrase search</label>
+                    </div>
                     <button className={classes.button} onClick={handleFieldSearchSubmit}> Search</button>
                 </div>
                 
-        
                 <GeospatialSearch/>
 
                 <div className={classes.searchResults}>
                 </div>
             </div>
-
 
             <div className={classes.rightSide}>
                 <div className={classes.right}></div>
@@ -61,7 +109,6 @@ function SearchPage() {
             </div>
         </div>
     );
-
 }
 
 export default SearchPage;

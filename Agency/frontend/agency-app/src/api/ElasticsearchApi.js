@@ -8,6 +8,14 @@ export async function searchByFields(listOfSimpleQueryDto) {
     await axiosInstance.post('/search/fields', listOfSimpleQueryDto);
 }
 
+export async function searchByCVContent(cvContent) {
+    await axiosInstance.post('/search/cv', cvContent);
+}
+
+export async function searchByCoverLetterContent(coverLetterContent) {
+    await axiosInstance.post('/search/cover-letter', coverLetterContent);
+}
+
 export async function searchByPhrase(simpleQueryDto) {
     await axiosInstance.post('/search/phrase', simpleQueryDto);
 }

@@ -36,16 +36,16 @@ public class SearchController {
         return ResponseEntity.ok(searchResults);
     }
 
-    @GetMapping(value = "/cv")
-    public ResponseEntity<List<SearchResult>> searchByCvContent(@RequestParam(name = "cvContent") String cvContent) {
+    @PostMapping(value = "/cv")
+    public ResponseEntity<List<SearchResult>> searchByCvContent(@RequestBody String cvContent) {
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByCvContent - start.");
         List<SearchResult> searchResults = elasticSearchService.searchByCvContent(cvContent);
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByCvContent - end.");
         return ResponseEntity.ok(searchResults);
     }
 
-    @GetMapping(value = "/cover-letter")
-    public ResponseEntity<List<SearchResult>> searchByCoverLetterContent(@RequestParam(name = "coverLetterContent") String coverLetterContent) {
+    @PostMapping(value = "/cover-letter")
+    public ResponseEntity<List<SearchResult>> searchByCoverLetterContent(@RequestBody String coverLetterContent) {
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByCoverLetterContent - start.");
         List<SearchResult> searchResults = elasticSearchService.searchByCoverLetterContent(coverLetterContent);
         LOGGER_INFO.info("SEARCH CONTROLLER: searchByCoverLetterContent - end.");
