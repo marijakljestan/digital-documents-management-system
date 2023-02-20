@@ -1,24 +1,32 @@
 package com.agency.backend.service;
 
+import com.agency.backend.dto.IpApiResponseDto;
 import com.agency.backend.model.Address;
 import com.agency.backend.service.interfaces.GeocodingService;
 import com.byteowls.jopencage.JOpenCageGeocoder;
 import com.byteowls.jopencage.model.JOpenCageForwardRequest;
 import com.byteowls.jopencage.model.JOpenCageResponse;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.elasticsearch.core.geo.GeoPoint;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import static com.agency.backend.AgencyApplication.LOGGER_INFO;
 
 
 @Service
-@NoArgsConstructor
+
 public class GeocodingServiceImpl implements GeocodingService {
 
     @Value("${geocoding.apikey}")
     private String geocodingApiKey;
+
+    @Autowired
+    private  RestTemplate restTemplate;
 
     @Override
     public GeoPoint getGeoPointFromAddress(Address address) {
@@ -28,6 +36,18 @@ public class GeocodingServiceImpl implements GeocodingService {
                 .append(address.getCountry()).toString();
         LOGGER_INFO.info("GEOCODING SERVICE: getGeoPointFromAddress - end.");
         return getGeoPoint(query);
+    }
+
+    @Override
+    public String getCityNameForIPAddress(String ipAddress) {
+        ResponseEntity<IpApiResponseDto> response = restTemplate.getForEntity("http://ip-api.com/json/" + ipAddress, IpApiResponseDto.class);
+        String city = "";
+        System.out.println(ipAddress);
+        if (response.getBody() != null) {
+            System.out.println(response.getBody());
+            city = response.getBody().getCity();
+        }
+        return city;
     }
 
     @Override

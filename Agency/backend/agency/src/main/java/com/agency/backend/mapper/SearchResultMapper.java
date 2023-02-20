@@ -15,9 +15,6 @@ public class SearchResultMapper {
                 .degree(sourceAsMap.get("degree").toString())
                 .cvContent(sourceAsMap.get("cvContent").toString())
                 .coverLetterContent(sourceAsMap.get("coverLetterContent").toString())
-                //.street(sourceAsMap.get("street").toString())
-                //.stretNumber(sourceAsMap.get("streetNumber").toString())
-                //.city(sourceAsMap.get("city").toString())
                 .build();
     }
 }

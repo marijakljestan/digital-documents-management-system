@@ -6,6 +6,10 @@ function HomePage() {
 
     const navigate = useNavigate();
 
+    function handleStatistics() {
+        navigate("/statistics");
+    }
+
     function handleSearchCandidate() {
         navigate("/search");
     }
@@ -19,7 +23,7 @@ function HomePage() {
             <div className={classes.navbar}>
                 <div className={classes.leftSide}>
                     <h3 className={classes.navbarItem} onClick={handleSearchCandidate}> Candidate base</h3>
-                    <h3 className={classes.navbarItem}> About us</h3>
+                    <h3 className={classes.navbarItem} onClick={handleStatistics}> Statistics</h3>
                     <h3 className={classes.navbarItem}> Contact</h3>
                 </div>
                 <div className={classes.rightSide}>

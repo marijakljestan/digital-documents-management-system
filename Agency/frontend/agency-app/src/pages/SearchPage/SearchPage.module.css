@@ -1,7 +1,7 @@
 .pageWrapper {
     display: flex;
     flex-direction: row;
-    height: calc(100vh);
+    height: calc(100vh - 3vh);
     margin-bottom: 3rem;
 }
 
@@ -81,7 +81,7 @@
     width: 50%;
     height: calc(100vh);
     padding-left: 5rem;
-    padding-top: 1%;
+    padding-top: 1rem;
 }
 
 .caption {

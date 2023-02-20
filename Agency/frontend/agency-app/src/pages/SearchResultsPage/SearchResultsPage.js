@@ -2,6 +2,7 @@ import classes from './SearchResultsPage.module.css';
 import React  from 'react';
 import { useLocation } from 'react-router';
 import SearchResult from '../../components/SearchResult/SearchResult'
+import image from '../../images/search-engine.jpg'
 
 function SearchResultsPage(props) {
 
@@ -19,6 +20,9 @@ function SearchResultsPage(props) {
                         <SearchResult candidate={candidate}/>
                     )
                 }
+            </div>
+            <div className={classes.rightContainer}>
+                <img className={classes.imageWrapper} src={image} />
             </div>
         </div>
     );

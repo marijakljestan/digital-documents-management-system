@@ -7,5 +7,7 @@ public interface GeocodingService {
 
     GeoPoint getGeoPointFromAddress(Address address);
 
+    String getCityNameForIPAddress(String ipAddress);
+
     GeoPoint getGeoPointOfCity(String city);
 }
