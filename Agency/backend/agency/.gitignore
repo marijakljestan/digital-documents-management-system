@@ -15,6 +15,7 @@ target/
 
 .env
 docs/
+logs/
 
 ### IntelliJ IDEA ###
 .idea
