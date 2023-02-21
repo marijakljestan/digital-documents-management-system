@@ -1,0 +1,132 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.navbar{
+    position: absolute;
+    display: flex;
+    margin-top: 0;
+    width: 70%;
+    height: 6.5vh;
+    padding-left: 25%;
+    padding-top: 1rem;
+    z-index: 1;
+}
+
+.leftSide{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rightSide{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 3rem;
+    width: 30%;
+}
+
+.navbarItem{
+    color: rgb(115, 115, 121);;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin-right: 5rem;
+    height: fit-content;
+}
+
+.navbarItem:hover{
+    text-decoration: underline 1px;
+    cursor: pointer;
+}
+
+.content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 3.5rem);
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    width: 40%;
+    margin-right: 60%;
+    z-index: 1;
+    padding-left: 5rem;
+}
+
+.page {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 3.5rem);
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    margin-left: 20%;
+    z-index: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0)  80%, rgb(255, 255, 255)), 
+                linear-gradient(to right, rgba(255, 255, 255, 0) 40%, rgb(255, 255, 255)),
+                url('../../images/agency-5.png') right/cover;
+}
+
+.caption {
+    color: rgb(43, 69, 107);;
+    font-size: 3.5rem;
+    margin-top: 10vh;
+    margin-bottom: 0%;
+}
+
+.lighterCaption {
+    color: rgb(62, 123, 139);;
+    font-size: 3.5rem;
+    margin-top: 0.1%;
+}
+
+.textContent{
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.description{
+    display: flex;
+    color: rgb(43, 69, 107);
+    margin-top: 5rem;
+    font-size: 1.1rem;
+}
+
+.button {
+    width: 8rem;
+    height: 90%;
+    background-color: rgb(157, 198, 218);
+    color: white;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.button:hover{
+    background-color: rgb(187, 203, 213);
+}
+
+@media (max-width: 60rem) {
+
+    .caption {
+       font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 40rem) {
+
+    .caption {
+        font-size: 2.5rem;
+    }
+
+}
+
