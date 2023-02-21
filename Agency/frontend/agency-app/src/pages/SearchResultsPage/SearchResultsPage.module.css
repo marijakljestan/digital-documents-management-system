@@ -1,0 +1,41 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: calc(100%);
+}
+
+.rightContainer{
+    display: flex;
+    width: 40%;
+}
+
+.imageWrapper{
+    height: calc(80vh);
+    width: 38rem;
+    margin-top: 5rem;
+}
+
+.header{
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+    height: 10rem;
+}
+
+.caption {
+    color: rgb(70, 89, 118);;
+    font-size: 3rem;
+    margin-left: 1rem;
+    margin-top: 5rem;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem 3rem;
+    padding-right: 0rem;
+}

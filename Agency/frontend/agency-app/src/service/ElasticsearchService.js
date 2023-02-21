@@ -2,30 +2,30 @@ import { searchByField, searchByFields, searchByPhrase, booleanSearch, geospatia
 
 export const ElasticsearchService = {
 
-    searchByField: function(simpleQueryDto){
-        return searchByField(simpleQueryDto);
+    searchByField: async function(simpleQueryDto){
+        return await searchByField(simpleQueryDto);
     },
 
-    searchByFields: function(firstQuery, secondQuery){
+    searchByFields: async function(firstQuery, secondQuery){
         const simpleQueryList = [];
         simpleQueryList.push(firstQuery);
         simpleQueryList.push(secondQuery);
-        return searchByFields(simpleQueryList);
+        return await searchByFields(simpleQueryList);
     },
 
-    searchByCVContent: function(cvContent) {
-        return searchByCVContent(cvContent);
+    searchByCVContent: async function(cvContent) {
+        return await searchByCVContent(cvContent);
     },
 
-    searchByCoverLetterContent: function(coverLetterContent) {
-        return searchByCoverLetterContent(coverLetterContent);
+    searchByCoverLetterContent: async function(coverLetterContent) {
+        return await searchByCoverLetterContent(coverLetterContent);
     },
 
-    searchByPhrase: function(simpleQueryDto){
-        return searchByPhrase(simpleQueryDto);
+    searchByPhrase: async function(simpleQueryDto){
+        return await searchByPhrase(simpleQueryDto);
     },
 
-    booleanSearch: function(firstQuery, secondQuery, booleanOperation) {
+    booleanSearch: async function(firstQuery, secondQuery, booleanOperation) {
         const advancedSearchQuery = {
             "field1" : firstQuery.field,
             "value1" : firstQuery.value,
@@ -33,10 +33,10 @@ export const ElasticsearchService = {
             "value2" : secondQuery.value,
             "operation" : booleanOperation
         }
-        return booleanSearch(advancedSearchQuery);
+        return await booleanSearch(advancedSearchQuery);
     },
 
-    geospatialSearch: function(geospatialFormData) {
-        return geospatialSearch(geospatialFormData);
+    geospatialSearch: async function(geospatialFormData) {
+        return await geospatialSearch(geospatialFormData);
     }
 }

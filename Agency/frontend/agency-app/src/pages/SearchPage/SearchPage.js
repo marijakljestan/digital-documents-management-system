@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { ElasticsearchService } from '../../service/ElasticsearchService';
 import GeospatialSearch from '../../components/GeospatialSearch/GeospatialSearch';
 import CandidateSearch from '../../components/CandidateSearch/CandidateSearch';
-import SearchResult from '../../components/SearchResult/SearchResult';
 
 function SearchPage() {
 
@@ -14,28 +13,31 @@ function SearchPage() {
     const [secondQuery, setSecondQuery] = useState({field: "", value: ""});
     const [booleanOperation, setBooleanOperation] = useState();
     const [enabledPhraseSearch, setEnabledPhraseSearch] = useState(false);
-   
+    const [searchResults, setSearchResults] = useState([]);
 
-    function handleFieldSearchSubmit() {
-    
+    async function handleFieldSearchSubmit() {
+        
+        var data;
         if(booleanOperation) {
-            ElasticsearchService.booleanSearch(firstQuery, secondQuery, booleanOperation);
+            data = await ElasticsearchService.booleanSearch(firstQuery, secondQuery, booleanOperation);
         } 
         else if(enabledPhraseSearch) {
-            ElasticsearchService.searchByPhrase(firstQuery);
+            data = await ElasticsearchService.searchByPhrase(firstQuery);
         } 
         else if(firstQuery.field === "cvContent") {
-            ElasticsearchService.searchByCVContent(firstQuery.value);
+            data = await ElasticsearchService.searchByCVContent(firstQuery.value);
         } 
         else if (firstQuery.field === "coverLetterContent") {
-            ElasticsearchService.searchByCoverLetterContent(firstQuery.value);
+            data = await ElasticsearchService.searchByCoverLetterContent(firstQuery.value);
         } 
         else if(secondQuery.field !== "") {
-            ElasticsearchService.searchByFields(firstQuery, secondQuery);
+            data = await ElasticsearchService.searchByFields(firstQuery, secondQuery);
         } 
         else {
-            ElasticsearchService.searchByField(firstQuery);
+            data = await ElasticsearchService.searchByField(firstQuery);
+            setSearchResults(data);
         }
+        navigate('/search-results', { state: { candidates: data }})
     }
 
     function handleFirstFieldChange(e) {
@@ -74,8 +76,9 @@ function SearchPage() {
     return (
         <div className={classes.pageWrapper}>
             <div className={classes.left}>
-                <h1 className={classes.caption}> Find your perfect candidate</h1>
-                
+                <div className={classes.header}>
+                    <h1 className={classes.caption}> Find your perfect candidate</h1>
+                </div>
                 <h3 className={classes.note}>Field search</h3>
                 <CandidateSearch handleFieldChange={handleFirstFieldChange} handleValueChange={handleFirstValueChange}/>
                 <label className={classes.note}> *Only if you want Boolean search, for regular search you can ignore this.</label>

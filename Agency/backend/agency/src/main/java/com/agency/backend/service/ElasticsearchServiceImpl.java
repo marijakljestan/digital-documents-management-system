@@ -49,7 +49,7 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
     public List<SearchResult> searchByField(SimpleQueryDto queryDto) {
         /** https://stackoverflow.com/questions/60867242/elasticsearch-match-vs-term-in-filter/60867368#60867368 **/
         MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery(queryDto.getField(), queryDto.getValue()).analyzer(analyzer);
-        return executeSearch(queryBuilder);
+        return executeSearch(queryBuilder, queryDto.getField());
     }
 
     @Override
@@ -63,25 +63,25 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
 
         String[] arr = new String[queryDtos.size()];
         MultiMatchQueryBuilder searchQuery = QueryBuilders.multiMatchQuery(query.toString().trim(), fields.toArray(arr)).analyzer(analyzer);
-        return executeSearch(searchQuery);
+        return executeSearch(searchQuery, "");
     }
 
     @Override
     public List<SearchResult> searchByCvContent(String cvContent) {
         MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery("cvContent", cvContent).analyzer(analyzer);
-        return executeSearch(queryBuilder);
+        return executeSearch(queryBuilder, "cvContent");
     }
 
     @Override
     public List<SearchResult> searchByCoverLetterContent(String coverLetterContent) {
         MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery("coverLetterContent", coverLetterContent).analyzer(analyzer);
-        return executeSearch(queryBuilder);
+        return executeSearch(queryBuilder, "coverLetterContent");
     }
 
     @Override
     public List<SearchResult> searchByPhrase(SimpleQueryDto simpleQueryDto) {
         MatchPhraseQueryBuilder queryBuilder = QueryBuilders.matchPhraseQuery(simpleQueryDto.getField(), simpleQueryDto.getValue()).analyzer(analyzer);
-        return executeSearch(queryBuilder);
+        return executeSearch(queryBuilder, simpleQueryDto.getField());
     }
 
     @Override
@@ -99,7 +99,7 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
             boolQueryBuilder.must(queryBuilder1);
             boolQueryBuilder.mustNot(queryBuilder2);
         }
-        return executeSearch(boolQueryBuilder);
+        return executeSearch(boolQueryBuilder, advancedQueryDto.getField1());
     }
 
     @Override
@@ -109,18 +109,18 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
                                 .point(geoPoint.getLat(), geoPoint.getLon())
                                 .distance(geospatialSearchDto.getRadius(), DistanceUnit.KILOMETERS);
 
-        return executeSearch(queryBuilder);
+        return executeSearch(queryBuilder, "address.location");
     }
 
 
-    private List<SearchResult> executeSearch(QueryBuilder searchQuery) {
+    private List<SearchResult> executeSearch(QueryBuilder searchQuery, String highlightedField) {
         LOGGER_INFO.info("ES SERVICE: executeSearch - start.");
-        SearchRequest searchRequest = buildSearchRequest(searchQuery);
+        SearchRequest searchRequest = buildSearchRequest(searchQuery, highlightedField);
         List<SearchResult> results = new ArrayList<>();
         try {
             LOGGER_INFO.info("ES SERVICE: executeSearch - sending search request...");
             SearchResponse searchResponse = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
-            results = processSearchHits(searchResponse.getHits().getHits());
+            results = processSearchHits(searchResponse.getHits().getHits(), highlightedField);
         } catch (Exception e) {
             LOGGER_ERROR.error("ES SERVICE: executeSearch - ", e);
         }
@@ -128,31 +128,31 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
         return results;
     }
 
-    private  List<SearchResult> processSearchHits(SearchHit[] searchHits) {
+    private  List<SearchResult> processSearchHits(SearchHit[] searchHits, String highlightedField) {
         LOGGER_INFO.info("ES SERVICE: processSearchHits - start.");
         List<SearchResult> results = new ArrayList<>();
         for (SearchHit hit : searchHits) {
             SearchResult result = SearchResultMapper.toSearchResult(hit);
-            result.setHighlight(getHighlightContent(hit));
+            result.setHighlight(getHighlightContent(hit, highlightedField));
             results.add(result);
         }
         LOGGER_INFO.info("ES SERVICE: processSearchHits - end.");
         return results;
     }
 
-    private String getHighlightContent(SearchHit hit) {
+    private String getHighlightContent(SearchHit hit, String highlightedFieldName) {
         LOGGER_INFO.info("ES SERVICE: getHighlightContent - start.");
         Map<String, HighlightField> highlightFields = hit.getHighlightFields();
         if(highlightFields.isEmpty()) return "";
 
-        HighlightField highlightedField = highlightFields.get("cvContent");
+        HighlightField highlightedField = highlightFields.get(highlightedFieldName);
         LOGGER_INFO.info("ES SERVICE: getHighlightContent - end.");
         return highlightedField.fragments()[0].string();
     }
 
-    private SearchRequest buildSearchRequest(QueryBuilder searchQuery) {
+    private SearchRequest buildSearchRequest(QueryBuilder searchQuery, String highlightedField) {
         LOGGER_INFO.info("ES SERVICE: buildSearchRequest - start.");
-        HighlightBuilder highlightBuilder = getHighlightBuilder();
+        HighlightBuilder highlightBuilder = getHighlightBuilder(highlightedField);
 
         SearchRequest searchRequest = new SearchRequest(candidateIndex);
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
@@ -163,10 +163,10 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
         return searchRequest;
     }
 
-    private static HighlightBuilder getHighlightBuilder() {
+    private static HighlightBuilder getHighlightBuilder(String highlightedField) {
         LOGGER_INFO.info("ES SERVICE: getHighlightBuilder - start.");
         HighlightBuilder highlightBuilder = new HighlightBuilder();
-        highlightBuilder.field("cvContent");
+        highlightBuilder.field(highlightedField);
         highlightBuilder.preTags("<em>");
         highlightBuilder.postTags("</em>");
         highlightBuilder.fragmentSize(150);

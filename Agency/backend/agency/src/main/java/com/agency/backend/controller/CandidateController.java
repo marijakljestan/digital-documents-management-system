@@ -3,6 +3,7 @@ package com.agency.backend.controller;
 import com.agency.backend.dto.RegisterCandidateDto;
 import com.agency.backend.service.interfaces.CandidateIndexingService;
 import com.agency.backend.service.interfaces.CandidateService;
+import com.agency.backend.service.interfaces.GeocodingService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
