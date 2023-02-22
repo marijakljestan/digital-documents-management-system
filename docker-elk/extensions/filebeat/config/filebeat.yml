@@ -1,0 +1,47 @@
+name: filebeat
+
+filebeat.config:
+  modules:
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: false
+
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      hints.enabled: true
+
+processors:
+  - add_cloud_metadata: ~
+
+filebeat.inputs:
+- type: log
+  paths:
+    - /usr/share/filebeat/logs/file.log
+  enabled: true
+  close_inactive: 30m
+  processors:
+    - decode_json_fields:
+        fields: ["message"]
+        target: ""
+        overwrite_keys: true
+        max_depth: 2
+        process_array: true
+        add_error_key: true
+    - dissect:
+        tokenizer: "%{timestamp} %{loglevel} %{logger} | %{logmessage}"
+        field: "message"
+
+
+output.logstash:
+  hosts: ["logstash:5044"]
+setup.ingest: false  
+
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  username: filebeat_internal
+  password: ${FILEBEAT_INTERNAL_PASSWORD}  
+
+http:
+  enabled: true
+  host: 0.0.0.0
